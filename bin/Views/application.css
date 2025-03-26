@@ -1,0 +1,18 @@
+/* retro.css */
+.root {
+    -fx-font-family: 'Arial';
+}
+
+.button {
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(three-pass-box, #FFD700, 10, 0, 0, 0);
+}
+
+.text {
+    -fx-font-smoothing-type: lcd;
+}

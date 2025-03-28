@@ -4,55 +4,95 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1080" prefWidth="1920" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    
-    <!-- Fond d'écran -->
+<AnchorPane  xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
+        <!-- Background Image -->
         <ImageView fitHeight="1080" fitWidth="1920" preserveRatio="false">
             <image>
                 <Image url="file:C:/Users/lulu1/OneDrive - Haute Ecole Louvain en Hainaut/Documents/ecole/bac2/Projet/board.png" />
             </image>
         </ImageView>
         
-        <!-- Overlay sombre -->
-        <Pane prefHeight="1080" prefWidth="1920" style="-fx-background-color: rgba(0, 0, 0, 0.5);">
-         <children>
-                <Rectangle height="80" layoutX="-273.0" layoutY="281.0" styleClass="rectangle" width="80" x="690" y="245" />
-                <Rectangle height="80" layoutX="-450.0" layoutY="281.0" styleClass="rectangle" width="80" x="600" y="245" />
-                <Rectangle height="80" layoutX="-269.0" layoutY="281.0" styleClass="rectangle" width="80" x="510" y="245" />
-                <Rectangle height="80" layoutX="-92.0" layoutY="281.0" styleClass="rectangle" width="80" x="420" y="245" />
-                <Rectangle height="80" layoutX="-180.0" layoutY="190.0" styleClass="rectangle" width="80" x="330" y="245" />
-                <Rectangle height="80" layoutX="267.0" layoutY="281.0" styleClass="rectangle" width="80" x="240" y="245" />
-                <Rectangle height="80" layoutX="448.0" layoutY="281.0" styleClass="rectangle" width="80" x="150" y="245" />
-            <Rectangle height="80" layoutX="538.0" layoutY="281.0" styleClass="rectangle" width="80" x="150" y="245" />
-            <Rectangle height="80" layoutX="631.0" layoutY="281.0" styleClass="rectangle" width="80" x="150" y="245" />
-         </children></Pane>
+<Pane layoutX="50.0" layoutY="355.0" prefHeight="286.0" prefWidth="200.0" style="-fx-border-color: fuchsia; -fx-border-width: 2px; -fx-background-color: black; -fx-effect: dropshadow(gaussian, cyan, 20, 0, 0, 0); -fx-text-fill: white; -fx-border-radius: 15; -fx-background-radius: 15;">
+    <children>
+        <Text layoutX="40.0" layoutY="30.0" style="-fx-font-size: 18px; -fx-fill: white;" text="Progression" />
+
+        <!-- Pion 1 -->
+        <Circle fx:id="pion1" centerX="40" centerY="70" fill="red" radius="15" stroke="white" strokeWidth="2" />
+        <Text fx:id="progressionPion1" layoutX="70.0" layoutY="75.0" style="-fx-font-size: 18px; -fx-fill: white;" text="0" />
+
+        <!-- Pion 2 -->
+        <Circle fx:id="pion2" centerX="40" centerY="110" fill="blue" radius="15" stroke="white" strokeWidth="2" />
+        <Text fx:id="progressionPion2" layoutX="70.0" layoutY="115.0" style="-fx-font-size: 18px; -fx-fill: white;" text="0" />
+
+        <!-- Pion 3 -->
+        <Circle fx:id="pion3" centerX="40" centerY="150" fill="green" radius="15" stroke="white" strokeWidth="2" />
+        <Text fx:id="progressionPion3" layoutX="70.0" layoutY="155.0" style="-fx-font-size: 18px; -fx-fill: white;" text="0" />
+
+        <!-- Pion 4 -->
+        <Circle fx:id="pion4" centerX="40" centerY="190" fill="yellow" radius="15" stroke="white" strokeWidth="2" />
+        <Text fx:id="progressionPion4" layoutX="70.0" layoutY="195.0" style="-fx-font-size: 18px; -fx-fill: white;" text="0" />
+    </children>
+</Pane>
+
+
+
+
         
-        <!-- Grille de jeu -->
-        <Pane>
+
+        <!-- Dark Overlay -->
+        <Pane layoutY="-43.0" prefHeight="1123.0" prefWidth="2285.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);">
             <children>
-                <!-- Les rectangles sont placés en fonction des coordonnées calculées dans le code Java -->
-                <Rectangle height="80.0" styleClass="start" width="80.0" x="150" y="150" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="240" y="150" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="330" y="150" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="420" y="150" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="510" y="150" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="600" y="150" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="690" y="150" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="780" y="150" />
-                
-                <Rectangle height="80" styleClass="rectangle" width="80" x="780" y="245" />
-                
-                <Rectangle height="80" styleClass="rectangle" width="80" x="150" y="340" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="240" y="340" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="330" y="340" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="420" y="340" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="510" y="340" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="600" y="340" />
-                <Rectangle height="80" styleClass="rectangle" width="80" x="690" y="340" />
-                <Rectangle height="80.0" styleClass="end" width="80.0" x="780" y="340" />
+
+                <!-- Game Grid -->
+                <Pane layoutX="435.0" layoutY="43.0" prefHeight="1080" prefWidth="1920">
+                    <children>
+                        <Rectangle height="80" layoutX="54.0" layoutY="190.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="144.0" layoutY="190.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="234.0" layoutY="190.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80" layoutX="324.0" layoutY="190.0" styleClass="rectanglePurple" width="80" />
+                        <Rectangle height="80" layoutX="414.0" layoutY="190.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="504.0" layoutY="190.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="594.0" layoutY="190.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80" layoutX="594.0" layoutY="285.0" styleClass="rectanglePurple" width="80" />
+                        <Rectangle height="80" layoutX="-36.0" layoutY="380.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="54.0" layoutY="380.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="144.0" layoutY="380.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80" layoutX="234.0" layoutY="380.0" styleClass="rectanglePurple" width="80" />
+                        <Rectangle height="80" layoutX="324.0" layoutY="380.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="414.0" layoutY="380.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="504.0" layoutY="380.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80.0" layoutX="594.0" layoutY="380.0" styleClass="rectanglePurple" width="80.0" />
+                        <Rectangle height="80" layoutX="-36.0" layoutY="471.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="54.0" layoutY="560.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="-36.0" layoutY="560.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80" layoutX="414.0" layoutY="560.0" styleClass="rectanglePurple" width="80" />
+                        <Rectangle height="80" layoutX="324.0" layoutY="560.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="234.0" layoutY="560.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="144.0" layoutY="560.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80" layoutX="594.0" layoutY="560.0" styleClass="rectanglePurple" width="80" />
+                        <Rectangle height="80" layoutX="504.0" layoutY="560.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="324.0" layoutY="742.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="414.0" layoutY="742.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80" layoutX="504.0" layoutY="742.0" styleClass="rectanglePurple" width="80" />
+                        <Rectangle height="80" layoutX="594.0" layoutY="742.0" styleClass="rectangleYellow" width="80" />
+                        <Rectangle height="80" layoutX="594.0" layoutY="651.0" styleClass="rectangleBlue" width="80" />
+                        <Rectangle height="80" layoutX="54.0" layoutY="742.0" styleClass="rectangleGreen" width="80" />
+                        <Rectangle height="80" layoutX="144.0" layoutY="742.0" styleClass="rectanglePurple" width="80" />
+                        <Rectangle height="80" layoutX="234.0" layoutY="742.0" styleClass="rectangleYellow" width="80" />
+                      <!-- Animated Title -->
+                  <Text layoutX="94.0" layoutY="90.0" style="             -fx-font-size: 40px;              -fx-fill: linear-gradient(to right, cyan, rgb(138, 43, 226)); /* Cyan to dark purple gradient */             -fx-font-weight: bold;              -fx-stroke: fuchsia; /* Fuchsia text stroke */             -fx-stroke-width: 2;             -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0); /* Cyan shadow effect */             -fx-font-family: '/fonts/PressStart2P-Regular.ttf', sans-serif;           " text="TTMC - Arcade Edition" />
+
+
+                    </children>
+                </Pane>
+                  <!-- Grid Rectangles -->
+                  <Rectangle height="110.0" layoutX="365.0" layoutY="220.0" styleClass="start" width="114.0" />
+            <Rectangle height="110.0" layoutX="365.0" layoutY="774.0" styleClass="start" width="114.0" />
             </children>
         </Pane>
     </children>

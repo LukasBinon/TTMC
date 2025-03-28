@@ -1,35 +1,49 @@
-.rectangle {
-    -fx-fill: black;
-    -fx-stroke: linear-gradient(to right, purple, #ff00ff);
+.rectangleYellow {
+    -fx-fill: linear-gradient(to right, rgb(255, 215, 0), rgb(255, 223, 77)); 
+    -fx-stroke: fuchsia;
     -fx-stroke-width: 4;
-    -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0);
-    -fx-arc-width: 20; /* Arrondi horizontal */
-    -fx-arc-height: 20; /* Arrondi vertical */
+    -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0); 
+    -fx-arc-width: 20;
+    -fx-arc-height: 20;
 }
+
+
+
+.rectangleBlue {
+    -fx-fill: linear-gradient(to right, rgb(0, 0, 139), rgb(0, 0, 205)); 
+    -fx-stroke: fuchsia;
+    -fx-stroke-width: 4;
+    -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0); 
+    -fx-arc-width: 20;
+    -fx-arc-height: 20;
+}
+
+.rectangleGreen {
+    -fx-fill: linear-gradient(to right, rgb(64, 224, 208), rgb(0, 128, 128)); 
+    -fx-stroke: fuchsia;
+    -fx-stroke-width: 4;
+    -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0); 
+    -fx-arc-width: 20;
+    -fx-arc-height: 20;
+}
+
+.rectanglePurple {
+    -fx-fill: linear-gradient(to right, rgb(75, 0, 130), rgb(138, 43, 226)); 
+    -fx-stroke: fuchsia;
+    -fx-stroke-width: 4;
+    -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0); 
+    -fx-arc-width: 20;
+    -fx-arc-height: 20;
+}
+
 
 .start {
-    -fx-fill: linear-gradient(to bottom, lightgreen, limegreen);
-    -fx-stroke: lightgreen;
-    -fx-stroke-width: 2;
-    -fx-effect: dropshadow(gaussian, lightgreen, 15, 0.7, 0, 0);
-    -fx-arc-width: 30;
-    -fx-arc-height: 30;
+    -fx-fill: linear-gradient(to bottom, rgb(0, 255, 127), rgb(0, 204, 102)); 
+    -fx-stroke: fuchsia;
+    -fx-stroke-width: 4; 
+    -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0); 
+    -fx-arc-width: 30; 
+    -fx-arc-height: 30; 
 }
 
-.end {
-    -fx-fill: linear-gradient(to bottom, red, darkred);
-    -fx-stroke: red;
-    -fx-stroke-width: 2;
-    -fx-effect: dropshadow(gaussian, purple, 15, 0.7, 0, 0);
-    -fx-arc-width: 30;
-    -fx-arc-height: 30;
-}
 
-.connector {
-    -fx-fill: linear-gradient(to right, beige, lightyellow);
-    -fx-stroke: linear-gradient(to right, red, orange);
-    -fx-stroke-width: 4;
-    -fx-effect: dropshadow(gaussian, orange, 20, 0.6, 0, 0);
-    -fx-arc-width: 15; /* Arrondi */
-    -fx-arc-height: 15;
-}

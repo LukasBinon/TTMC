@@ -1,24 +1,32 @@
 package models;
 
-public class Piece {
-    private String name;
-    private int position;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
-    public Piece(String name) {
-        this.name = name;
-        this.position = 0;
+public class Piece {
+	private Circle token; // Représente visuellement le pion
+    private int position; // Position actuelle du pion
+
+    public Piece(Color color) {
+        this.token = new Circle(15, color); 
+        this.token.setVisible(false);      
+        this.position = 0;                
     }
 
-    public void moveTo(int newPosition) {
-        this.position = newPosition;
+    public Circle getToken() {
+        return token;
     }
 
     public int getPosition() {
         return position;
     }
 
-    public String getName() {
-        return name;
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public void setVisible(boolean isVisible) {
+        this.token.setVisible(isVisible); 
     }
 }
 

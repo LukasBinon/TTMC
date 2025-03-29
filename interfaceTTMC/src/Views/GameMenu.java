@@ -21,7 +21,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 
-public class Main extends Application {
+public class GameMenu extends Application {
 
     private static final String FONT_PATH = "/fonts/PressStart2P-Regular.ttf";
     private static final String BACKGROUND_IMAGE_PATH = "/images/menuTTMC.png";
@@ -148,6 +148,12 @@ public class Main extends Application {
         playerInput.setFont(Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 25));
         playerInput.setMaxWidth(200);
         playerInput.setStyle("-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: red;");
+        
+        playerInput.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("[1-4]?")) {
+                playerInput.setText(oldValue);
+            }
+        });
 
         Button startButton = createArcadeButton("Start Game");
         Button rulesButton = createArcadeButton("See Rules");

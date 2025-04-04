@@ -5,24 +5,23 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.*;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import Views.ChoicePiece;
 import Views.Menu;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Board extends Pane {
-    private List<Case> cases = new ArrayList<>();
-    private int tileSize = 80;
-    private Menu menu;
     
+    private Menu menu;
+    private List<PlayerConfig> playerConfigs; // Liste des joueurs
 
-    public Board(Stage primaryStage) {
+    public Board(Stage primaryStage, List<PlayerConfig> playerConfigs) {
+        this.playerConfigs = playerConfigs; // Stocke la configuration des joueurs
+
         // Configuration de l'arrière-plan
         ImageView background = new ImageView(new Image("file:C:/Users/lulu1/OneDrive - Haute Ecole Louvain en Hainaut/Documents/ecole/bac2/Projet/board.png"));
         background.setPreserveRatio(false);
@@ -42,11 +41,14 @@ public class Board extends Pane {
         // Menu
         menu = new Menu(primaryStage);
 
-        // Ajout des éléments au panneau principal
+        // Ajouter les éléments au panneau principal
         getChildren().add(backgroundStack);
 
         // Charger le plateau de jeu
         createSnakeBoard();
+
+        // Placer les pions des joueurs
+        placePlayerTokens();
     }
 
     public void start(Stage primaryStage) {
@@ -68,7 +70,6 @@ public class Board extends Pane {
     }
 
     private void createSnakeBoard() {
-        // Chargement des rectangles depuis le fichier FXML
         loadRectanglesFromFXML();
     }
 
@@ -76,39 +77,32 @@ public class Board extends Pane {
         try {
             // Charger le fichier FXML
             AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/view.fxml"));
-            getChildren().add(root); // Ajout de tous les enfants du fichier FXML au panneau principal
+            getChildren().add(root); 
 
-            // Récupérer et traiter les rectangles
-            for (javafx.scene.Node node : root.getChildrenUnmodifiable()) {
-                if (node instanceof Rectangle) {
-                    Rectangle rectFXML = (Rectangle) node;
-
-                    // Création du rectangle avec les mêmes propriétés
-                    Rectangle rect = new Rectangle(rectFXML.getWidth(), rectFXML.getHeight());
-                    rect.setLayoutX(rectFXML.getLayoutX());
-                    rect.setLayoutY(rectFXML.getLayoutY());
-                    rect.getStyleClass().addAll(rectFXML.getStyleClass());
-
-                    // Gestion des styles spécifiques pour "start" et "end"
-                    if (rectFXML.getStyleClass().contains("start")) {
-                        rect.setWidth(tileSize + 10);
-                        rect.setHeight(tileSize + 10);
-                    } else if (rectFXML.getStyleClass().contains("end")) {
-                        rect.setWidth(tileSize + 10);
-                        rect.setHeight(tileSize + 10);
-                    }
-
-                    // Ajouter le rectangle au panneau principal
-                    getChildren().add(rect);
-                }
-            }
         } catch (IOException e) {
             System.err.println("Erreur lors du chargement du fichier FXML !");
             e.printStackTrace();
         }
     }
 
-    public List<Case> getCases() {
-        return cases;
+    private void placePlayerTokens() {
+        if (playerConfigs == null || playerConfigs.isEmpty()) {
+            return;
+        }
+
+        // Position de départ (à ajuster selon la position de la première case)
+        double startX = 100; // Remplace par la vraie position de la case
+        double startY = 100; 
+
+        for (int i = 0; i < playerConfigs.size(); i++) {
+            PlayerConfig player = playerConfigs.get(i);
+
+            Circle token = new Circle(15); // Rayon du pion
+            token.setFill(ChoicePiece.COLORS[player.getColorIndex()]); // Appliquer la couleur choisie
+            token.setLayoutX(startX + (i * 20)); // Décalage pour éviter la superposition
+            token.setLayoutY(startY);
+
+            getChildren().add(token);
+        }
     }
 }

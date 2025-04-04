@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
@@ -65,7 +66,7 @@ public class GameMenu extends Application {
     }
 
 
-    private void playBackgroundMusic() {
+    public void playBackgroundMusic() {
         URL audioUrl = getClass().getResource(AUDIO_PATH);
         if (audioUrl != null) {
             Media media = new Media(audioUrl.toString());
@@ -81,7 +82,7 @@ public class GameMenu extends Application {
     /**
      * Charge l'image de fond
      */
-    private Image loadBackgroundImage() {
+    public Image loadBackgroundImage() {
         Image backgroundImage = new Image(getClass().getResourceAsStream(BACKGROUND_IMAGE_PATH));
         if (backgroundImage.isError()) {
             System.err.println("Error: Background image not loaded. Check the file path.");
@@ -93,7 +94,7 @@ public class GameMenu extends Application {
     /**
      *Crée le fond d'écran avec une couche transparente
      */
-    private StackPane createBackgroundStack(Image backgroundImage) {
+    public StackPane createBackgroundStack(Image backgroundImage) {
         BackgroundImage bgImage = new BackgroundImage(
                 backgroundImage,
                 BackgroundRepeat.NO_REPEAT,
@@ -115,7 +116,7 @@ public class GameMenu extends Application {
     /**
      * Crée le titre et le sous-titre
      */
-    private VBox createTitleContainer() {
+    public VBox createTitleContainer() {
         Text title = new Text("How much do you spend ?");
         title.setFont(Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 40));
         title.setFill(Color.YELLOW);
@@ -139,7 +140,7 @@ public class GameMenu extends Application {
     /**
      * Crée le menu avec les boutons et l'entrée joueur
      */
-    private VBox createMenu(Stage primaryStage) {
+    public VBox createMenu(Stage primaryStage) {
         Label playerLabel = new Label("Number of players:");
         playerLabel.setFont(Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 25));
         playerLabel.setTextFill(Color.WHITE);
@@ -149,21 +150,25 @@ public class GameMenu extends Application {
         playerInput.setMaxWidth(200);
         playerInput.setStyle("-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: red;");
         
-        playerInput.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("[1-4]?")) {
-                playerInput.setText(oldValue);
+     // Utilisation d'un TextFormatter pour limiter l'entrée
+        TextFormatter<String> formatter = new TextFormatter<>(change -> {
+            if (change.getControlNewText().matches("[1-4]?") || change.getControlNewText().isEmpty()) {
+                return change;
             }
+            return null;
         });
+        playerInput.setTextFormatter(formatter);
 
         Button startButton = createArcadeButton("Start Game");
         Button rulesButton = createArcadeButton("See Rules");
         Button quitButton = createArcadeButton("Quit");
 
-        // Gestion des actions des boutons
+        // Modification du gestionnaire d'événements pour startButton
         startButton.setOnAction(e -> {
-            String players = playerInput.getText();
-            launchGame();
-            
+            if (!playerInput.getText().isEmpty()) {
+                int playerCount = Integer.parseInt(playerInput.getText());
+                launchGame(playerCount, primaryStage);
+            }
         });
 
         rulesButton.setOnAction(e -> System.out.println("Displaying game rules..."));
@@ -177,10 +182,11 @@ public class GameMenu extends Application {
         return menuBox;
     }
 
+
     /**
      * Crée un bouton arcade stylisé
      */
-    private Button createArcadeButton(String text) {
+    public Button createArcadeButton(String text) {
         Button button = new Button(text);
 
         Font arcadeFont = Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 25);
@@ -211,7 +217,7 @@ public class GameMenu extends Application {
     /**
      * Crée un HBox contenant un label, un bouton ON/OFF
      */
-    private HBox createMusicControlBox() {
+    public HBox createMusicControlBox() {
 
         Button toggleButton = new Button("Music: ON");
 
@@ -267,18 +273,15 @@ public class GameMenu extends Application {
         }
     }
     
-    private void launchGame() {
-        // Créer une nouvelle instance de ChoicePiece
-        ChoicePiece choicePiece = new ChoicePiece();
-        
-        // Créer un nouveau stage (fenêtre) pour lancer la page "ChoicePiece"
-        Stage stage = new Stage();
-        
-        // Appliquer le mode plein écran sur ce stage
-        stage.setFullScreen(true);
-        
-        // Lancer la page ChoicePiece
-        choicePiece.start(stage);
+    
+    public void launchGame(int playerCount, Stage currentStage) {
+     
+        	// Ferme le menu principal
+            currentStage.close(); 
+            ChoicePiece choicePiece = new ChoicePiece(playerCount);
+            Stage gameStage = new Stage();
+            choicePiece.start(gameStage);
+
     }
 
 

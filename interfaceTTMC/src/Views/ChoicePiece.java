@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ChoicePiece extends Application {
     private static final String[] SHAPES = {"CIRCLE", "SQUARE", "TRIANGLE"};
-    public static final Color[] COLORS = {Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW};
+    private static final Color[] COLORS = {Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW};
     private static final String FONT_PATH = "/fonts/PressStart2P-Regular.ttf";
     
     private int currentPlayerIndex = 0;
@@ -49,7 +49,11 @@ public class ChoicePiece extends Application {
     
     }
 
-   
+    /**
+     * Initialise la liste des joueurs avec des valeurs par défaut
+     * - Noms: "Player 1", "Player 2"...
+     * - Formes et couleurs réparties cycliquement
+     */
     public void initializePlayers() {
         for (int i = 0; i < totalPlayers; i++) {
             playerConfigs.add(new PlayerConfig(
@@ -61,14 +65,16 @@ public class ChoicePiece extends Application {
     }
 
     public void setup(Stage stage) {
-      
+        // Chargement de la police
         Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 12);
 
-       
+        // Configuration de l'arrière-plan
         ImageView background = createBackground();
         Pane transparentLayer = createTransparentLayer();
 
-        
+        /**
+         * Configure l'interface utilisateur principale
+         */
         PlayerConfig currentPlayer = playerConfigs.get(currentPlayerIndex);
         titleLabel = createTitleLabel();
         nameField = createNameField(currentPlayer);
@@ -76,7 +82,7 @@ public class ChoicePiece extends Application {
         currentShape = createPlayerShape(currentPlayer);
         Button actionButton = createActionButton(stage);
 
-     
+        // Organisation du layout
         VBox content = new VBox(30, titleLabel, nameField, shapeControls, currentShape, actionButton);
         content.setAlignment(Pos.CENTER);
         content.setPadding(new Insets(50));
@@ -84,7 +90,7 @@ public class ChoicePiece extends Application {
         StackPane root = new StackPane(background, transparentLayer, content);
         Scene scene = new Scene(root, 800, 600);
 
-        
+        // Configuration de la fenêtre
         stage.setTitle("How much do you spend? - Token Selection");
         stage.setScene(scene);
         stage.setFullScreen(true);
@@ -123,7 +129,9 @@ public class ChoicePiece extends Application {
         field.setMaxWidth(300);
         return field;
     }
-    
+    /**
+     * Crée les contrôles pour changer la forme du pion
+     */
     public HBox createShapeControls(PlayerConfig player) {
         shapeLabel = new Label(SHAPES[player.getShapeIndex()]);
         shapeLabel.setFont(Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 20));
@@ -164,7 +172,10 @@ public class ChoicePiece extends Application {
         return shape;
     }
 
-   
+    /**
+     * Crée le bouton d'action principal
+     * avec une gestion claire du texte selon l'état
+     */
     public Button createActionButton(Stage stage) {
         String buttonText;
         
@@ -185,12 +196,12 @@ public class ChoicePiece extends Application {
 
             
             if (currentPlayerIndex < totalPlayers - 1) {
-               
+                // passe au joueur suivant
                 currentPlayerIndex++;
-                refreshUI(stage);  
+                refreshUI(stage);  // Met à jour l'interface
             } else {
               
-                launchGame();
+                launchGame(stage);
             }
         });
 
@@ -198,7 +209,7 @@ public class ChoicePiece extends Application {
     }
 
     
-   
+    //mise a jour forme
     public void updateShape(int direction) {
         PlayerConfig current = playerConfigs.get(currentPlayerIndex);
         int newIndex = (current.getShapeIndex() + direction + SHAPES.length) % SHAPES.length;
@@ -208,7 +219,7 @@ public class ChoicePiece extends Application {
         refreshShape();
     }
 
-    
+    //mise a jour couleur
     public void updateColor() {
         PlayerConfig current = playerConfigs.get(currentPlayerIndex);
         int newIndex = (current.getColorIndex() + 1) % COLORS.length;
@@ -220,7 +231,7 @@ public class ChoicePiece extends Application {
         PlayerConfig current = playerConfigs.get(currentPlayerIndex);
         Shape newShape = createPlayerShape(current);
         
-        
+        // Remplace la forme actuelle dans la scène
         VBox parent = (VBox) currentShape.getParent();
         parent.getChildren().set(parent.getChildren().indexOf(currentShape), newShape);
         currentShape = newShape;
@@ -229,23 +240,29 @@ public class ChoicePiece extends Application {
     public void refreshUI(Stage stage) {
         PlayerConfig current = playerConfigs.get(currentPlayerIndex);
         
-        
+        // Met à jour les éléments UI
         titleLabel.setText("PLAYER " + (currentPlayerIndex + 1) + " - CHOOSE YOUR TOKEN");
         nameField.setText(current.getPlayerName());
         shapeLabel.setText(SHAPES[current.getShapeIndex()]);
         refreshShape();
         
-       
+        // Met à jour le bouton d'action
         Button actionButton = (Button) ((VBox) currentShape.getParent()).getChildren().get(4);
         actionButton.setText((currentPlayerIndex < totalPlayers - 1) ? "NEXT PLAYER" : "LAUNCH GAME");
         
         }
 
-    private void launchGame() {
-        Stage stage = new Stage();
-        Board board = new Board(stage, playerConfigs);
-        stage.setFullScreen(true);
-        board.start(stage);
+    public void launchGame(Stage stage) {
+        System.out.println("Launching game with " + totalPlayers + " players:");
+        for (PlayerConfig config : playerConfigs) {
+            System.out.println(config.getPlayerName() + 
+                " - " + SHAPES[config.getShapeIndex()] + 
+                " - " + COLORS[config.getColorIndex()]);
+        }
+        
+        stage.close();
+        Board board = new Board(new Stage());
+        board.start(new Stage());
     }
 
     public Button createArcadeButton(String text) {

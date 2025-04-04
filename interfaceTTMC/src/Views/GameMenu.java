@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -54,7 +53,6 @@ public class GameMenu extends Application {
         BorderPane.setAlignment(musicControlBox, Pos.BOTTOM_RIGHT);
         BorderPane.setMargin(musicControlBox, new Insets(0, 20, 20, 0));
         root.setBottom(musicControlBox);
-        
 
         StackPane mainLayout = new StackPane();
         mainLayout.getChildren().addAll(backgroundStack, root);
@@ -65,29 +63,8 @@ public class GameMenu extends Application {
         primaryStage.setTitle("How much do you spend ?");
         primaryStage.setFullScreen(true);
         primaryStage.show();
-        
-     // Bind properties for dynamic resizing
-        mainLayout.prefWidthProperty().bind(scene.widthProperty());
-        mainLayout.prefHeightProperty().bind(scene.heightProperty());
-        scene.widthProperty().addListener((obs, oldVal, newVal) -> adjustTextSize(scene));
-        scene.heightProperty().addListener((obs, oldVal, newVal) -> adjustTextSize(scene));
     }
-    
-    private void adjustTextSize(Scene scene) {
-        double widthScale = scene.getWidth() / 800.0; 
-        double heightScale = scene.getHeight() / 600.0;
-        double scale = Math.min(widthScale, heightScale);
 
-        Text title = (Text) scene.lookup("#title"); 
-        Text subtitle = (Text) scene.lookup("#subtitle"); 
-
-        if (title != null) {
-            title.setStyle("-fx-font-size: " + (40 * scale) + "px;"); 
-        }
-        if (subtitle != null) {
-            subtitle.setStyle("-fx-font-size: " + (25 * scale) + "px;"); 
-        }
-    }
 
     public void playBackgroundMusic() {
         URL audioUrl = getClass().getResource(AUDIO_PATH);
@@ -141,7 +118,6 @@ public class GameMenu extends Application {
      */
     public VBox createTitleContainer() {
         Text title = new Text("How much do you spend ?");
-        title.setId("title"); 
         title.setFont(Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 40));
         title.setFill(Color.YELLOW);
         title.setStroke(Color.RED);
@@ -149,7 +125,6 @@ public class GameMenu extends Application {
         title.setEffect(new DropShadow(20, Color.RED));
 
         Text subtitle = new Text("Ready to take on the challenge?");
-        subtitle.setId("subtitle"); 
         subtitle.setFont(Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 25));
         subtitle.setFill(Color.WHITE);
         subtitle.setEffect(new DropShadow(10, Color.YELLOW));

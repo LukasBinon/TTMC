@@ -1,0 +1,419 @@
+[
+    {
+      "theme_name": "Improbable",
+      "priority": 4,
+      "question": "Which video game holds the record for the highest number of simultaneous players on a single map, with millions of participants?",
+      "answer": "Fortnite (live events like the Travis Scott concert)",
+      "multiple_choice": [
+        "Minecraft",
+        "World of Warcraft",
+        "PUBG",
+        "Apex Legends",
+        "Fortnite (live events like the Travis Scott concert)"
+      ]
+    },
+    {
+      "theme_name": "Improbable",
+      "priority": 3,
+      "question": "Which racing game holds the record for the longest drift ever performed in-game, with over 500 kilometers of continuous drifting?",
+      "answer": "Gran Turismo 7",
+      "multiple_choice": [
+        "Need for Speed: Underground 2",
+        "Forza Horizon 4",
+        "Burnout Paradise",
+        "Mario Kart 8 Deluxe",
+        "Gran Turismo 7"
+      ]
+    },
+    {
+      "theme_name": "Improbable",
+      "priority": 3,
+      "question": "Which Fortnite player won $3 million in a single competition, setting a record for the highest earnings in an eSports tournament?",
+      "answer": "Bugha (Kyle Giersdorf), winner of the Fortnite World Cup 2019",
+      "multiple_choice": [
+        "Ninja",
+        "Tfue",
+        "Shroud",
+        "DrLupo",
+        "Bugha (Kyle Giersdorf), winner of the Fortnite World Cup 2019"
+      ]
+    },
+    {
+      "theme_name": "Improbable",
+      "priority": 4,
+      "question": "Which eSports event gathered more than 100,000 spectators in person for a single final, setting a world record for live audience attendance?",
+      "answer": "League of Legends World Championship 2017",
+      "multiple_choice": [
+        "The International 2018 (Dota 2)",
+        "Overwatch League 2020 Finals",
+        "EVO 2019",
+        "PUBG Global Championship 2019",
+        "League of Legends World Championship 2017"
+      ]
+    },
+    {
+      "theme_name": "Improbable",
+      "priority": 2,
+      "question": "Which video game allows players to control a character that is actually a bookshelf filled with objects inside a house, aiming to escape forces threatening the house's stability?",
+      "answer": "Shelfie",
+      "multiple_choice": [
+        "Bookshelf Adventure",
+        "Escape the Shelf",
+        "House of Books",
+        "Object Escape",
+        "Shelfie"
+      ]
+    },
+    {
+      "theme_name": "Improbable",
+      "priority": 2,
+      "question": "In which video game do players control a single pixel that moves through different colorful levels, reacting to its environment?",
+      "answer": "PixelJunk Eden",
+      "multiple_choice": [
+        "Pac-Man",
+        "Geometry Wars",
+        "Pixel Puzzles",
+        "Tetris",
+        "PixelJunk Eden"
+      ]
+    },
+    {
+      "theme_name": "Improbable",
+      "priority": 1,
+      "question": "Which video game, developed in 2015, requires players to control a team of cats making strategic decisions while living adventures on an alien planet?",
+      "answer": "Cat Quest",
+      "multiple_choice": [
+        "Feline Frenzy",
+        "Cat Kingdom",
+        "Alien Cats",
+        "Meowtopia",
+        "Cat Quest"
+      ]
+    },
+    {
+      "theme_name": "Improbable",
+      "priority": 2,
+      "question": "Which video game uses a 'walking simulator' concept where the player explores a strange city filled with bizarre creatures and solves puzzles by interacting with absurd objects?",
+      "answer": "Jazzpunk",
+      "multiple_choice": [
+        "The Stanley Parable",
+        "Antichamber",
+        "Dear Esther",
+        "What the Box?",
+        "Jazzpunk"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 1,
+      "question": "What is the first game developed and published by Riot Games, released in 2009, that popularized the MOBA (Multiplayer Online Battle Arena) genre?",
+      "answer": "League of Legends",
+      "multiple_choice": [
+        "Dota 2",
+        "Smite",
+        "Heroes of the Storm",
+        "Paragon",
+        "League of Legends"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 2,
+      "question": "What is the name of the tactical shooter (FPS) developed by Riot Games, released in 2020?",
+      "answer": "Valorant",
+      "multiple_choice": [
+        "Call of Duty: Modern Warfare",
+        "Counter-Strike: Global Offensive",
+        "Rainbow Six Siege",
+        "Apex Legends",
+        "Valorant"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 2,
+      "question": "Which FPS, developed by Valve, is famous for its competitive multiplayer mode and iconic maps like 'Dust II' and 'Inferno'?",
+      "answer": "Counter-Strike: Global Offensive",
+      "multiple_choice": [
+        "Overwatch",
+        "Team Fortress 2",
+        "Battlefield 4",
+        "Halo 5",
+        "Counter-Strike: Global Offensive"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 2,
+      "question": "Which FPS features a multiplayer mode where players take on the role of heroes with unique abilities, such as Tracer or Reaper?",
+      "answer": "Overwatch",
+      "multiple_choice": [
+        "Team Fortress 2",
+        "Battleborn",
+        "Paladins",
+        "Quake Champions",
+        "Overwatch"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 1,
+      "question": "What is the name of the main character in 'Super Mario Bros'?",
+      "answer": "Mario",
+      "multiple_choice": [
+        "Luigi",
+        "Yoshi",
+        "Waluigi",
+        "Princess Peach",
+        "Mario"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 1,
+      "question": "Who is the creator of the 'The Legend of Zelda' series?",
+      "answer": "Shigeru Miyamoto",
+      "multiple_choice": [
+        "Hideo Kojima",
+        "Ken Levine",
+        "Sid Meier",
+        "John Carmack",
+        "Shigeru Miyamoto"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 1,
+      "question": "Which musical video game developed by Harmonix popularized the 'guitar hero' concept with a plastic guitar controller?",
+      "answer": "Guitar Hero",
+      "multiple_choice": [
+        "Rock Band",
+        "Beat Saber",
+        "Just Dance",
+        "Dance Dance Revolution",
+        "Guitar Hero"
+      ]
+    },
+    {
+      "theme_name": "Entertainment",
+      "priority": 2,
+      "question": "In which rhythm game developed by Ubisoft do players press buttons in time with the music, using a controller or a dance mat?",
+      "answer": "Just Dance",
+      "multiple_choice": [
+        "Dance Dance Revolution",
+        "Guitar Hero",
+        "StepMania",
+        "Pump It Up",
+        "Just Dance"
+      ]
+    },
+    {
+        "theme_name": "Education",
+        "priority": 2,
+        "question": "Which video game allows players to build and launch rockets while learning the basics of astronomy and physics?",
+        "answer": "Kerbal Space Program",
+        "multiple_choice": [
+          "Space Engineers",
+          "No Man's Sky",
+          "Elite Dangerous",
+          "Astroneer",
+          "Kerbal Space Program"
+        ]
+      },
+      {
+        "theme_name": "Education",
+        "priority": 3,
+        "question": "Which video game, developed by Valve, uses physics-based puzzles to teach scientific concepts while telling a captivating story?",
+        "answer": "Portal 2",
+        "multiple_choice": [
+          "The Talos Principle",
+          "Braid",
+          "Antichamber",
+          "Quantum Conundrum",
+          "Portal 2"
+        ]
+      },
+      {
+        "theme_name": "Education",
+        "priority": 2,
+        "question": "Which video game, developed by Nintendo, offers language lessons (such as English or Japanese) through interactive mini-games?",
+        "answer": "Learn with Pokémon: Typing Adventure",
+        "multiple_choice": [
+          "Duolingo",
+          "Rosetta Stone",
+          "Brain Age",
+          "Nihongo Master",
+          "Learn with Pokémon: Typing Adventure"
+        ]
+      },
+      {
+        "theme_name": "Education",
+        "priority": 3,
+        "question": "Which video game, released in 2016, allows players to learn Japanese by exploring a fantasy world and solving linguistic puzzles?",
+        "answer": "Learn Japanese To Survive!",
+        "multiple_choice": [
+          "Japanese Quest",
+          "Rosetta Stone: Japanese",
+          "Koei's Japanese Language Game",
+          "My Japanese Coach",
+          "Learn Japanese To Survive!"
+        ]
+      },
+      {
+        "theme_name": "Education",
+        "priority": 1,
+        "question": "Which video game allows students to learn history by recreating major historical events while exploring cities and monuments in 3D?",
+        "answer": "Assassin's Creed: Discovery Tour",
+        "multiple_choice": [
+          "Civilization VI",
+          "Age of Empires II",
+          "Total War: Shogun 2",
+          "Rome: Total War",
+          "Assassin's Creed: Discovery Tour"
+        ]
+      },
+      {
+        "theme_name": "Education",
+        "priority": 2,
+        "question": "In which simulation video game do players manage a business to learn financial management and marketing skills?",
+        "answer": "SimCity or RollerCoaster Tycoon",
+        "multiple_choice": [
+          "The Sims",
+          "Zoo Tycoon",
+          "Planet Coaster",
+          "Farmville",
+          "SimCity or RollerCoaster Tycoon"
+        ]
+      },
+      {
+        "theme_name": "Education",
+        "priority": 1,
+        "question": "When was the first commercial video game released?",
+        "answer": "In 1972, with the game 'Pong'",
+        "multiple_choice": [
+          "In 1980, with Pac-Man",
+          "In 1977, with Space Invaders",
+          "In 1967, with The Empire Game",
+          "In 1975, with Taito's Space Invaders",
+          "In 1972, with the game 'Pong'"
+        ]
+      },
+      {
+        "theme_name": "Education",
+        "priority": 1,
+        "question": "Who is considered the father of modern video games?",
+        "answer": "Ralph H. Baer",
+        "multiple_choice": [
+          "Nolan Bushnell",
+          "Shigeru Miyamoto",
+          "Hideo Kojima",
+          "John Carmack",
+          "Ralph H. Baer"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 2,
+        "question": "In video game development, which OOP concept is used to allow an object to take multiple forms, such as an enemy that can be both a 'fighter' and a 'flyer'?",
+        "answer": "Polymorphism",
+        "multiple_choice": [
+          "Encapsulation",
+          "Abstraction",
+          "Inheritance",
+          "Composition",
+          "Polymorphism"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 3,
+        "question": "In a video game, which design pattern is used to create complex objects (such as a game level or a character) step by step, separating construction from the final representation?",
+        "answer": "The Builder Pattern",
+        "multiple_choice": [
+          "The Singleton Pattern",
+          "The Observer Pattern",
+          "The Strategy Pattern",
+          "The Composite Pattern",
+          "The Builder Pattern"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 2,
+        "question": "Which object-oriented programming concept in Java is commonly used in video games to allow different types of game objects (such as enemies, characters, and collectible items) to share common behaviors while having unique characteristics?",
+        "answer": "Inheritance",
+        "multiple_choice": [
+          "Abstraction",
+          "Encapsulation",
+          "Polymorphism",
+          "Composition",
+          "Inheritance"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 3,
+        "question": "In game development, which design pattern is commonly used to ensure that there is only one instance of a global object, such as the sound manager, save system, or scene manager?",
+        "answer": "Singleton",
+        "multiple_choice": [
+          "Observer",
+          "Factory",
+          "Decorator",
+          "Prototype",
+          "Singleton"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 2,
+        "question": "In an RPG, a spell system allows players to cast different types of magic (fire, ice, lightning, etc.). Each spell has its own effects, mana costs, and animations. Which design pattern would you use to structure this system flexibly, allowing new spells to be added easily without modifying existing code?",
+        "answer": "Strategy Pattern",
+        "multiple_choice": [
+          "Factory Pattern",
+          "Singleton Pattern",
+          "Composite Pattern",
+          "Observer Pattern",
+          "Strategy Pattern"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 3,
+        "question": "In a sandbox construction game, the player can create buildings composed of multiple elements (walls, roofs, doors, windows, etc.). Each building can be saved and reloaded later with its structure intact. Which design pattern would you use to represent these buildings hierarchically and allow flexible management of their components?",
+        "answer": "Composite Pattern",
+        "multiple_choice": [
+          "Prototype Pattern",
+          "Factory Pattern",
+          "Singleton Pattern",
+          "Decorator Pattern",
+          "Composite Pattern"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 1,
+        "question": "Which French-speaking YouTuber, known for his videos on programming and video games, created a programming language entirely using emojis?",
+        "answer": "V2F",
+        "multiple_choice": [
+          "Bob l'éponge",
+          "Léo Techmaker",
+          "Squeezie",
+          "Cyprien",
+          "V2F"
+        ]
+      },
+      {
+        "theme_name": "Informatics",
+        "priority": 2,
+        "question": "In a video game, when creating a class to represent a character, which keyword is generally used to ensure that an attribute (such as health or mana points) is only accessible within its own class?",
+        "answer": "private",
+        "multiple_choice": [
+          "public",
+          "protected",
+          "static",
+          "final",
+          "private"
+        ]
+      }
+    ]
+  

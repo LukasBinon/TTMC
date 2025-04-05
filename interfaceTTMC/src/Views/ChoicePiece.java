@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ChoicePiece extends Application {
     private static final String[] SHAPES = {"CIRCLE", "SQUARE", "TRIANGLE"};
-    private static final Color[] COLORS = {Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW};
+    public static final Color[] COLORS = {Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW};
     private static final String FONT_PATH = "/fonts/PressStart2P-Regular.ttf";
     
     private int currentPlayerIndex = 0;
@@ -261,7 +261,7 @@ public class ChoicePiece extends Application {
         }
         
         stage.close();
-        Board board = new Board(new Stage());
+        Board board = new Board(new Stage(), playerConfigs);
         board.start(new Stage());
     }
 

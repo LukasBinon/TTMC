@@ -549,3 +549,793 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-03-29 15:16:41.336 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-29 15:16:42.859
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-29 15:16:46.134
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-29 15:16:52.388
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-03-30 15:39:36.723 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 15:39:38.720
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 15:40:02.816
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-30 15:40:07.550
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-03-30 16:51:28.964 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 16:51:30.554
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 16:51:35.281
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-30 16:51:40.048
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-03-30 21:48:24.905 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 21:48:27.333
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 21:48:32.070
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-30 21:48:35.783
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-03-30 21:55:02.241 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 21:55:04.237
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-30 21:55:07.860
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-30 21:55:13.289
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-03-31 12:49:12.456 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-31 12:49:16.179
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-31 12:49:31.022
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-31 12:49:38.508
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-03-31 13:59:27.938 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-31 13:59:29.991
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-31 13:59:39.365
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-31 13:59:44.460
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-02 09:30:08.124 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-02 09:30:12.030
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-02 09:30:17.322
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-02 09:30:25.228
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-04 11:01:14.837 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-04 11:01:16.821
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-04 11:01:22.997
+!MESSAGE Logback config file: C:\TTMC\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-04 11:01:27.993
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lulu1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.xml.ui 4 4 2025-04-04 11:07:45.547
+!MESSAGE Cannot invoke "org.eclipse.jdt.core.IType.getSuperclassName()" because "t" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.IType.getSuperclassName()" because "t" is null
+	at org.eclipse.fx.ide.model.internal.FXEventHandlerProperty.isEventHandler(FXEventHandlerProperty.java:38)
+	at org.eclipse.fx.ide.model.internal.utils.PropertiesUtil.getProperty(PropertiesUtil.java:144)
+	at org.eclipse.fx.ide.model.internal.utils.PropertiesUtil.resolveProperties(PropertiesUtil.java:100)
+	at org.eclipse.fx.ide.model.internal.FXClass.getLocalProperties(FXClass.java:143)
+	at org.eclipse.fx.ide.model.internal.FXClass.getAllProperties(FXClass.java:135)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.checkControllerAttributes(FXMLValidator.java:156)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.validate(FXMLValidator.java:123)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.validateV1File(FXMLValidator.java:388)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.validate(FXMLValidator.java:333)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.validate(ReconcileStepForValidator.java:252)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.reconcileModel(ReconcileStepForValidator.java:210)
+	at org.eclipse.jface.text.reconciler.AbstractReconcileStep.reconcile(AbstractReconcileStep.java:92)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ValidatorStrategy.reconcile(ValidatorStrategy.java:270)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.process(DocumentRegionProcessor.java:323)
+	at org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor.process(StructuredRegionProcessor.java:260)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$BackgroundThread.run(DirtyRegionProcessor.java:694)
+
+!ENTRY org.eclipse.wst.xml.ui 4 4 2025-04-04 11:08:11.218
+!MESSAGE Cannot invoke "org.eclipse.jdt.core.IType.getSuperclassName()" because "t" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.IType.getSuperclassName()" because "t" is null
+	at org.eclipse.fx.ide.model.internal.FXEventHandlerProperty.isEventHandler(FXEventHandlerProperty.java:38)
+	at org.eclipse.fx.ide.model.internal.utils.PropertiesUtil.getProperty(PropertiesUtil.java:144)
+	at org.eclipse.fx.ide.model.internal.utils.PropertiesUtil.resolveProperties(PropertiesUtil.java:100)
+	at org.eclipse.fx.ide.model.internal.FXClass.getLocalProperties(FXClass.java:143)
+	at org.eclipse.fx.ide.model.internal.FXClass.getAllProperties(FXClass.java:135)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.checkControllerAttributes(FXMLValidator.java:156)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.validate(FXMLValidator.java:123)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.validateV1File(FXMLValidator.java:388)
+	at org.eclipse.fx.ide.fxml.editors.FXMLValidator.validate(FXMLValidator.java:333)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.validate(ReconcileStepForValidator.java:252)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.reconcileModel(ReconcileStepForValidator.java:210)
+	at org.eclipse.jface.text.reconciler.AbstractReconcileStep.reconcile(AbstractReconcileStep.java:92)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ValidatorStrategy.reconcile(ValidatorStrategy.java:270)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.process(DocumentRegionProcessor.java:323)
+	at org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor.process(StructuredRegionProcessor.java:260)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$BackgroundThread.run(DirtyRegionProcessor.java:694)
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-04-04 11:36:16.284
+!MESSAGE IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+!STACK 0
+java.util.concurrent.TimeoutException: IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:106)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:551)
+	at org.eclipse.core.internal.jobs.JobManager.schedule(JobManager.java:1408)
+	at org.eclipse.core.internal.jobs.InternalJob.schedule(InternalJob.java:396)
+	at org.eclipse.core.runtime.jobs.Job.schedule(Job.java:684)
+	at org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler.schedule(TaskListSynchronizationScheduler.java:115)
+	at org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler.userAttentionGained(TaskListSynchronizationScheduler.java:149)
+	at org.eclipse.mylyn.internal.monitor.ui.ActivityContextManager.fireActive(ActivityContextManager.java:231)
+	at org.eclipse.mylyn.internal.monitor.ui.ActivityContextManager$1.active(ActivityContextManager.java:94)
+	at org.eclipse.mylyn.internal.monitor.ui.CheckActivityJob.run(CheckActivityJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2025-04-04 11:36:16.284
+!MESSAGE Thread that is running the IJobChangeListener: Worker-45: Synchronizing Relevant Tasks
+	at org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler.jobDone(TaskListSynchronizationScheduler.java:170)
+	at org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler$1.done(TaskListSynchronizationScheduler.java:59)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEvent(JobListeners.java:160)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEventsAsync(JobListeners.java:140)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:80)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:551)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:755)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:83)
+
+All thread infos: 
+"main" prio=6 Id=1 RUNNABLE
+	at org.eclipse.swt.internal.win32.OS.WaitMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4822)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:339)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:993)
+	at org.eclipse.ui.internal.Workbench$1.eventLoopIdle(Workbench.java:474)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1156)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	...
+
+"Reference Handler" daemon prio=10 Id=9 RUNNABLE
+	at java.base@23.0.2/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@23.0.2/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+	at java.base@23.0.2/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" daemon prio=8 Id=10 WAITING on java.lang.ref.NativeReferenceQueue$Lock@5a77c2e2
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.ref.NativeReferenceQueue$Lock@5a77c2e2
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at java.base@23.0.2/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:166)
+	at java.base@23.0.2/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+	at java.base@23.0.2/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" daemon prio=9 Id=11 RUNNABLE
+
+"Attach Listener" daemon prio=5 Id=12 RUNNABLE
+
+"Common-Cleaner" daemon prio=8 Id=28 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2399195f
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2399195f
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+	at java.base@23.0.2/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+	at java.base@23.0.2/java.lang.Thread.runWith(Thread.java:1588)
+	...
+
+"Notification Thread" daemon prio=9 Id=29 RUNNABLE
+
+"Active Thread: Equinox Container: 7be19314-10f1-40c1-b8c2-8fe28b48dd4b" prio=5 Id=43 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6b59276b
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6b59276b
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+	at java.base@23.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@23.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	...
+
+"Framework Event Dispatcher: Equinox Container: 7be19314-10f1-40c1-b8c2-8fe28b48dd4b" daemon prio=5 Id=45 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@2da8179e
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@2da8179e
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"Start Level: Equinox Container: 7be19314-10f1-40c1-b8c2-8fe28b48dd4b" daemon prio=5 Id=46 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@492cb01b
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@492cb01b
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"Bundle File Closer" daemon prio=5 Id=48 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@22140b80
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@22140b80
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"SCR Component Actor" daemon prio=5 Id=49 WAITING on java.util.LinkedList@d412d6
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.LinkedList@d412d6
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:83)
+	at java.base@23.0.2/java.lang.Thread.runWith(Thread.java:1588)
+	at java.base@23.0.2/java.lang.Thread.run(Thread.java:1575)
+
+"EMF Reference Cleaner" daemon prio=5 Id=51 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6d2df1b5
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6d2df1b5
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:75)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:166)
+	...
+
+"Worker-JM" prio=5 Id=53 WAITING on java.util.ArrayList@41ad3863
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.ArrayList@41ad3863
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:61)
+
+"Gogo shell" prio=5 Id=56 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@436773dd
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@436773dd
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"JNA Cleaner" daemon prio=6 Id=60 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@63058bc5
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@63058bc5
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+	at com.sun.jna.internal.Cleaner$CleanerThread.run(Cleaner.java:154)
+
+"Git Repository Closer" daemon prio=6 Id=62 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@61a76e49
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@61a76e49
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:75)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:166)
+	...
+
+"VirtualThread-unparker" daemon prio=5 Id=65 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@49e13c3e
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@49e13c3e
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+	at java.base@23.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@23.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	...
+
+"Java indexing" daemon prio=4 Id=67 WAITING on org.eclipse.jdt.internal.core.search.indexing.IndexManager@31e04744
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.jdt.internal.core.search.indexing.IndexManager@31e04744
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:503)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager$$Lambda/0x00000283be7f8000.run(Unknown Source)
+	at java.base@23.0.2/java.lang.Thread.runWith(Thread.java:1588)
+	at java.base@23.0.2/java.lang.Thread.run(Thread.java:1575)
+
+"EventAdmin Async Event Dispatcher Thread" daemon prio=6 Id=70 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@7e74b91e
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@7e74b91e
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"Worker-5" prio=5 Id=75 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@247b55bf
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@247b55bf
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-8: Activity Monitor Job" prio=5 Id=78 RUNNABLE
+	at java.management@23.0.2/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@23.0.2/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:518)
+	at java.management@23.0.2/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:506)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:551)
+	at org.eclipse.core.internal.jobs.JobManager.schedule(JobManager.java:1408)
+	at org.eclipse.core.internal.jobs.InternalJob.schedule(InternalJob.java:396)
+	at org.eclipse.core.runtime.jobs.Job.schedule(Job.java:684)
+	...
+
+"Worker-9" prio=5 Id=79 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@247b55bf
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@247b55bf
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"pool-1-thread-1" prio=5 Id=86 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@cb5d3cb
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@cb5d3cb
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"pool-2-thread-1" prio=5 Id=87 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@729db94f
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@729db94f
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"JGit-FileStoreAttributeReader-1" daemon prio=5 Id=90 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4af06f53
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4af06f53
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Worker-32: Process Console Input Job" prio=5 Id=118 WAITING on org.eclipse.ui.console.IOConsoleInputStream@c075bf7
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.ui.console.IOConsoleInputStream@c075bf7
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:140)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:91)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:113)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:909)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Provisioning Event Dispatcher" daemon prio=5 Id=129 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@2e0efa37
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@2e0efa37
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"Thread-11" prio=5 Id=131 TIMED_WAITING
+	at java.base@23.0.2/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@23.0.2/java.lang.Thread.sleepNanos(Thread.java:496)
+	at java.base@23.0.2/java.lang.Thread.sleep(Thread.java:527)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+"Compiler Source File Reader" daemon prio=5 Id=133 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"pool-3-thread-1" prio=5 Id=141 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@788502e4
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@788502e4
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=147 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=150 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=166 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=172 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"CompletableFutureDelayScheduler" daemon prio=6 Id=190 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4e6b36e0
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4e6b36e0
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@23.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	...
+
+"Stop Language Server Task Processor" prio=6 Id=193 WAITING on java.util.TaskQueue@17eda258
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.TaskQueue@17eda258
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at java.base@23.0.2/java.util.TimerThread.mainLoop(Timer.java:543)
+	at java.base@23.0.2/java.util.TimerThread.run(Timer.java:522)
+
+"LS-org.eclipse.wildwebdeveloper.xml#dispatcher" prio=5 Id=201 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@15e28474
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@15e28474
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=230 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=232 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=240 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=241 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=242 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=247 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=248 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=268 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Compiler Source File Reader" daemon prio=5 Id=269 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@31c66978
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@23.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Output Stream Monitor for PID 26356 Play" daemon prio=1 Id=312 RUNNABLE (in native)
+	at java.base@23.0.2/java.io.FileInputStream.readBytes(Native Method)
+	at java.base@23.0.2/java.io.FileInputStream.read(FileInputStream.java:328)
+	at java.base@23.0.2/java.lang.Process$PipeInputStream.read(Process.java:868)
+	at java.base@23.0.2/java.io.BufferedInputStream.read1(BufferedInputStream.java:345)
+	at java.base@23.0.2/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	at java.base@23.0.2/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base@23.0.2/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@4520260e
+
+"Error Stream Monitor for PID 26356 Play" daemon prio=1 Id=313 RUNNABLE (in native)
+	at java.base@23.0.2/java.io.FileInputStream.readBytes(Native Method)
+	at java.base@23.0.2/java.io.FileInputStream.read(FileInputStream.java:328)
+	at java.base@23.0.2/java.lang.Process$PipeInputStream.read(Process.java:868)
+	at java.base@23.0.2/java.io.BufferedInputStream.read1(BufferedInputStream.java:345)
+	at java.base@23.0.2/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	at java.base@23.0.2/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base@23.0.2/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@52ebd47c
+
+"Input Stream Monitor for PID 26356 Play" daemon prio=5 Id=314 WAITING on java.lang.Object@286e531b
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.Object@286e531b
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.writeNext(InputStreamMonitor.java:204)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.write(InputStreamMonitor.java:176)
+	at org.eclipse.debug.internal.core.InputStreamMonitor$$Lambda/0x00000283bf52a980.run(Unknown Source)
+	at java.base@23.0.2/java.lang.Thread.runWith(Thread.java:1588)
+	at java.base@23.0.2/java.lang.Thread.run(Thread.java:1575)
+
+"Process monitor for PID 26356 Play" daemon prio=5 Id=315 RUNNABLE (in native)
+	at java.base@23.0.2/java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+	at java.base@23.0.2/java.lang.ProcessImpl.waitFor(ProcessImpl.java:575)
+	at org.eclipse.debug.core.model.RuntimeProcess$ProcessMonitorThread.run(RuntimeProcess.java:511)
+
+"Worker-44" prio=5 Id=386 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@247b55bf
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@247b55bf
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-45: Synchronizing Relevant Tasks" prio=5 Id=393 BLOCKED on org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler@64bb9dc2 owned by "Worker-8: Activity Monitor Job" Id=78
+	at org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler.jobDone(TaskListSynchronizationScheduler.java:170)
+	-  blocked on org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler@64bb9dc2
+	at org.eclipse.mylyn.internal.tasks.ui.TaskListSynchronizationScheduler$1.done(TaskListSynchronizationScheduler.java:59)
+	at org.eclipse.core.internal.jobs.JobListeners$$Lambda/0x00000283be21aa98.notify(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEvent(JobListeners.java:160)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEventsAsync(JobListeners.java:140)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:80)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:551)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:755)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@292ea346
+
+

@@ -14,7 +14,7 @@
         <!-- Background Image -->
         <ImageView fitHeight="1080" fitWidth="1920" preserveRatio="false">
             <image>
-                <Image url="file:C:/Users/lulu1/OneDrive - Haute Ecole Louvain en Hainaut/Documents/ecole/bac2/Projet/board.png" />
+                <Image url="images/board.png" />
             </image>
         </ImageView>
       

@@ -23,7 +23,7 @@ public class Board extends Pane {
         this.playerConfigs = playerConfigs; // Stocke la configuration des joueurs
 
         // Configuration de l'arrière-plan
-        ImageView background = new ImageView(new Image("file:C:/Users/lulu1/OneDrive - Haute Ecole Louvain en Hainaut/Documents/ecole/bac2/Projet/board.png"));
+        ImageView background = new ImageView(new Image("images/board.png"));
         background.setPreserveRatio(false);
         background.setSmooth(true);
         background.fitWidthProperty().bind(primaryStage.widthProperty());

@@ -17,7 +17,6 @@
 	<classpathentry kind="lib" path="JavaFX/javafx.fxml.jar"/>
 	<classpathentry kind="lib" path="JavaFX/javafx.graphics.jar"/>
 	<classpathentry kind="lib" path="JavaFX/javafx.media.jar"/>
-	<classpathentry kind="lib" path="JavaFX/javafx.properties"/>
 	<classpathentry kind="lib" path="JavaFX/javafx.swing.jar"/>
 	<classpathentry kind="lib" path="JavaFX/javafx.web.jar"/>
 	<classpathentry kind="lib" path="JavaFX/javafx-swt.jar"/>

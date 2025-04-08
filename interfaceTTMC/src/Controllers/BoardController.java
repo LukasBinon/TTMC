@@ -2,23 +2,31 @@ package Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.shape.Circle;
-
+import javafx.stage.Stage;
+import models.Game;
+import models.PlayerConfig;
 
 import java.util.List;
+
+import Views.GameMenu;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class BoardController {
 
-    @FXML
-    private Circle pion1;
-    @FXML
-    private Circle pion2;
-    @FXML
-    private Circle pion3;
-    @FXML
-    private Circle pion4;
+	private List<PlayerConfig> players;
+	@FXML
+	private Circle pion1, pion2, pion3, pion4;
+	private Game game;
+	private int currentPlayer;
 
-
+	public void setPlayers(List<PlayerConfig> players) {
+        this.players = players;
+        this.game = new Game(players);
+        this.currentPlayer = 0;
+    }
+	
     // Vecteurs des positions pour chaque pion
     private List<List<Double>> path1 = new ArrayList<>();
     private List<List<Double>> path2 = new ArrayList<>();
@@ -44,6 +52,14 @@ public class BoardController {
         positionPion(pion2, path2.get(0));
         positionPion(pion3, path3.get(0));
         positionPion(pion4, path4.get(0));
+        
+    }
+    
+    public void initializePion() {
+    	int nbPlayers = players.size();
+    	if(nbPlayers < 4) pion4.setVisible(false);
+    	if(nbPlayers < 3) pion3.setVisible(false);
+    	if(nbPlayers < 2) pion2.setVisible(false);
     }
 
     // Créer les chemins pour chaque pion (chemin 1 à 4)
@@ -213,48 +229,71 @@ public class BoardController {
         pion.setLayoutY(position.get(1));
     }
 
+
     // Méthode pour déplacer un pion d'une case à la suivante
     @FXML
     public void movePion1() {
-        if (indexPion1 < path1.size() - 1) {
-            indexPion1++;
-            positionPion(pion1, path1.get(indexPion1));
+    	int pos = players.get(0).getPosition() + 1;
+        if (pos < path1.size()) {
+            players.get(0).setPosition(pos);;
+            System.out.println(pos);
+            positionPion(pion1, path1.get(pos));
         }
     }
 
     @FXML
     public void movePion2() {
-        if (indexPion2 < path2.size() - 1) {
-            indexPion2++;
-            positionPion(pion2, path2.get(indexPion2));
+    	int pos = players.get(1).getPosition() + 1;
+        if (pos < path2.size()) {
+            players.get(1).setPosition(pos);;
+            positionPion(pion2, path2.get(pos));
         }
     }
 
     @FXML
     public void movePion3() {
-        if (indexPion3 < path3.size() - 1) {
-            indexPion3++;
-            positionPion(pion3, path3.get(indexPion3));
+    	int pos = players.get(2).getPosition() + 1;
+        if (pos < path3.size()) {
+            players.get(2).setPosition(pos);;
+            positionPion(pion3, path3.get(pos));
         }
     }
 
     @FXML
     public void movePion4() {
-        if (indexPion4 < path4.size() - 1) {
-            indexPion4++;
-            positionPion(pion4, path4.get(indexPion4));
+    	int pos = players.get(3).getPosition() + 1;
+        if (pos < path4.size()) {
+            players.get(3).setPosition(pos);;
+            positionPion(pion4, path4.get(pos));
         }
     }
     
     @FXML
     public void movePion() {
-        // Déplace chaque pion vers sa position suivante, en fonction de son chemin
-        movePion1();
-        movePion2();
-        movePion3();
-        movePion4();
-     
+        // Déplace le pion du joueur actuel
+    	if(!game.isFinished()) {
+	    	switch(currentPlayer) {
+	    		case 0:movePion1();break;
+	    		case 1:movePion2();break;
+	    		case 2:movePion3();break;
+	    		case 3:movePion4();break;
+	    	}
+	
+	        // Passer au joueur suivant
+	        currentPlayer = (currentPlayer + 1) % players.size();
+	        game.verifyEndGame();
+    	} else {
+    		GameMenu gameMenu = new GameMenu();
+    		try {
+    			
+				gameMenu.start(new Stage());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	}
     }
+
 
 }
 

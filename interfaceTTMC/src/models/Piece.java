@@ -10,7 +10,7 @@ public class Piece {
     public Piece(Color color) {
         this.token = new Circle(15, color); 
         this.token.setVisible(false);      
-        this.position = 0;                
+        this.position = 0;
     }
 
     public Circle getToken() {
@@ -28,5 +28,6 @@ public class Piece {
     public void setVisible(boolean isVisible) {
         this.token.setVisible(isVisible); 
     }
+    
 }
 

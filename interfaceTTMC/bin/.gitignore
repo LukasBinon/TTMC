@@ -1,7 +1,5 @@
-/fonts/
-/images/
-/question.json
-/sounds/
 /Controllers/
-/models/
+/Main/
 /Views/
+/factories/
+/models/

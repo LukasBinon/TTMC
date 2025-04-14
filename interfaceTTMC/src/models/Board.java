@@ -14,10 +14,13 @@ import Views.Menu;
 import java.io.IOException;
 import java.util.List;
 
+import Controllers.BoardController;
+
 public class Board extends Pane {
     
     private Menu menu;
     private List<PlayerConfig> playerConfigs; // Liste des joueurs
+    private Game game;
 
     public Board(Stage primaryStage, List<PlayerConfig> playerConfigs) {
         this.playerConfigs = playerConfigs; // Stocke la configuration des joueurs
@@ -76,7 +79,17 @@ public class Board extends Pane {
     private void loadRectanglesFromFXML() {
         try {
             // Charger le fichier FXML
-            AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/view.fxml"));
+            AnchorPane root = loader.load(); // Charge le FXML et retourne le root
+
+            // Accéder au contrôleur de ce fichier FXML
+            BoardController boardController = loader.getController();
+
+            // Initialiser les joueurs 
+            boardController.setPlayers(playerConfigs);
+            boardController.initializePion();
+
+            // Ajouter le root à la scène
             getChildren().add(root); 
 
         } catch (IOException e) {
@@ -84,6 +97,7 @@ public class Board extends Pane {
             e.printStackTrace();
         }
     }
+
 
     private void placePlayerTokens() {
         if (playerConfigs == null || playerConfigs.isEmpty()) {

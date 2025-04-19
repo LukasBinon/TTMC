@@ -1,43 +1,48 @@
 package Controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import models.Game;
 import models.PlayerConfig;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 import Views.GameMenu;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
 public class BoardController {
 
-	private List<PlayerConfig> players;
-	@FXML
-	private Circle pion1, pion2, pion3, pion4;
-	private Game game;
-	private int currentPlayer;
+    private List<PlayerConfig> players;
+    @FXML
+    private Circle pion1, pion2, pion3, pion4;
+    private Game game;
+    private int currentPlayer;
+    
+    @FXML private Rectangle tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9, tile10;
+    @FXML private Rectangle tile11, tile12, tile13, tile14, tile15, tile16, tile17, tile18, tile19, tile20;
+    @FXML private Rectangle tile21, tile22, tile23, tile24, tile25, tile26, tile27, tile28, tile29, tile30;
+    @FXML private Rectangle tile31, tile32, tile33, tile34, tile35;
 
-	public void setPlayers(List<PlayerConfig> players) {
+    private Map<Integer, Node> tileMap = new HashMap<>();
+
+    public void setPlayers(List<PlayerConfig> players) {
         this.players = players;
         this.game = new Game(players);
         this.currentPlayer = 0;
     }
-	
+    
     // Vecteurs des positions pour chaque pion
     private List<List<Double>> path1 = new ArrayList<>();
     private List<List<Double>> path2 = new ArrayList<>();
     private List<List<Double>> path3 = new ArrayList<>();
     private List<List<Double>> path4 = new ArrayList<>();
-
-    // Indices des positions actuelles des pions
-    private int indexPion1 = 0;
-    private int indexPion2 = 0;
-    private int indexPion3 = 0;
-    private int indexPion4 = 0;
 
     @FXML
     public void initialize() {
@@ -46,13 +51,76 @@ public class BoardController {
         path2 = createPath2();
         path3 = createPath3();
         path4 = createPath4();
+        
+        initializeTileMap();
 
         // Initialiser les positions de départ des pions
         positionPion(pion1, path1.get(0));
         positionPion(pion2, path2.get(0));
         positionPion(pion3, path3.get(0));
         positionPion(pion4, path4.get(0));
+    }
+    
+    private String getThemeForPosition(int position) {
+        // Les cases start (position 0 et dernière position) donnent un thème aléatoire
+        if (position == 0 || position == path1.size() - 1) {
+            String[] randomThemes = {"Education", "Entertainment", "Improbable", "Informatics"};
+            return randomThemes[new Random().nextInt(randomThemes.length)];
+        }
         
+        // Pour les autres positions, on récupère la tile correspondante
+        Node tile = tileMap.get(position + 1); // +1 car les tiles commencent à 1
+        if (tile != null) {
+            // Parcourir toutes les classes CSS de la tile
+            for (String styleClass : tile.getStyleClass()) {
+                // Vérifier si la classe correspond à un thème connu
+                if (styleClass.equals("Education") || 
+                    styleClass.equals("Entertainment") ||
+                    styleClass.equals("Improbable") || 
+                    styleClass.equals("Informatics")) {
+                    return styleClass;
+                }
+            }
+        }
+        return "Education"; // Thème par défaut
+    }
+    
+    private void initializeTileMap() {
+        tileMap.put(1, tile1);
+        tileMap.put(2, tile2);
+        tileMap.put(3, tile3);
+        tileMap.put(4, tile4);
+        tileMap.put(5, tile5);
+        tileMap.put(6, tile6);
+        tileMap.put(7, tile7);
+        tileMap.put(8, tile8);
+        tileMap.put(9, tile9);
+        tileMap.put(10, tile10);
+        tileMap.put(11, tile11);
+        tileMap.put(12, tile12);
+        tileMap.put(13, tile13);
+        tileMap.put(14, tile14);
+        tileMap.put(15, tile15);
+        tileMap.put(16, tile16);
+        tileMap.put(17, tile17);
+        tileMap.put(18, tile18);
+        tileMap.put(19, tile19);
+        tileMap.put(20, tile20);
+        tileMap.put(21, tile21);
+        tileMap.put(22, tile22);
+        tileMap.put(23, tile23);
+        tileMap.put(24, tile24);
+        tileMap.put(25, tile25);
+        tileMap.put(26, tile26);
+        tileMap.put(27, tile27);
+        tileMap.put(28, tile28);
+        tileMap.put(29, tile29);
+        tileMap.put(30, tile30);
+        tileMap.put(31, tile31);
+        tileMap.put(32, tile32);
+        tileMap.put(33, tile33);
+        tileMap.put(34, tile34);
+        tileMap.put(35, tile35);
     }
     
     public void initializePion() {
@@ -270,28 +338,41 @@ public class BoardController {
     
     @FXML
     public void movePion() {
-        // Déplace le pion du joueur actuel
-    	if(!game.isFinished()) {
-	    	switch(currentPlayer) {
-	    		case 0:movePion1();break;
-	    		case 1:movePion2();break;
-	    		case 2:movePion3();break;
-	    		case 3:movePion4();break;
-	    	}
-	
-	        // Passer au joueur suivant
-	        currentPlayer = (currentPlayer + 1) % players.size();
-	        game.verifyEndGame();
-    	} else {
-    		GameMenu gameMenu = new GameMenu();
-    		try {
-    			
-				gameMenu.start(new Stage());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-    	}
+        if (!game.isFinished()) {
+            // Déplace le pion du joueur actuel
+            switch(currentPlayer) {
+                case 0: movePion1(); break;
+                case 1: movePion2(); break;
+                case 2: movePion3(); break;
+                case 3: movePion4(); break;
+            }
+            
+            // Récupère la position actuelle du joueur
+            int currentPosition = players.get(currentPlayer).getPosition();
+            
+            // Ouvre la carte avec le thème correspondant
+            String theme = getThemeForPosition(currentPosition);
+            TirageCarte.setThemeSelected(theme);
+            
+            try {
+                new TirageCarte();
+				TirageCarte.start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+            // Passer au joueur suivant
+            currentPlayer = (currentPlayer + 1) % players.size();
+            game.verifyEndGame();
+        } else {
+            GameMenu gameMenu = new GameMenu();
+            try {
+                gameMenu.start(new Stage());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    
     }
 
 

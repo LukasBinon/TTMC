@@ -1,0 +1,46 @@
+/* Education Theme - Retro Style */
+.rootPane {
+    background-color: #1e2a47; /* Dark background */
+    font-family: 'Press Start 2P', cursive; /* Pixelated font */
+    color: #f4e2a1; /* Light yellow for text */
+}
+
+.combo-box {
+    -fx-background-color: #0f1122;
+    -fx-text-fill: #f4e2a1;
+    -fx-border-color: #f4e2a1;
+    -fx-font-size: 16px;
+}
+
+.button {
+    -fx-background-color: #ff00ff;
+    -fx-text-fill: #fff;
+    -fx-font-size: 18px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #ff7fff;
+}
+
+.label {
+    font-size: 16px;
+    text-fill: #f4e2a1;
+}
+
+.list-view {
+    -fx-background-color: #3e497a;
+    -fx-text-fill: #f4e2a1;
+    -fx-font-size: 14px;
+    -fx-border-color: #f4e2a1;
+}
+
+.list-view .cell {
+    -fx-background-color: #3e497a;
+    -fx-text-fill: #f4e2a1;
+}
+
+.list-view .cell:hover {
+    -fx-background-color: #444e74;
+}

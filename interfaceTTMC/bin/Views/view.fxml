@@ -55,43 +55,43 @@
                 <!-- Game Grid -->
                 <Pane layoutX="435.0" layoutY="43.0" prefHeight="1080" prefWidth="1936.0">
                     <children>
-						<Rectangle fx:id="tile2" height="80" layoutX="84.0" layoutY="190.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile3" height="80" layoutX="174.0" layoutY="190.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile4" height="80" layoutX="264.0" layoutY="190.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile5" height="80" layoutX="354.0" layoutY="190.0" styleClass="rectanglePurple" width="80" />
-						<Rectangle fx:id="tile6" height="80" layoutX="444.0" layoutY="190.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile7" height="80" layoutX="534.0" layoutY="190.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile8" height="80" layoutX="624.0" layoutY="190.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile9" height="80" layoutX="624.0" layoutY="285.0" styleClass="rectanglePurple" width="80" />
-						<Rectangle fx:id="tile10" height="80" layoutX="-6.0" layoutY="380.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile11" height="80" layoutX="84.0" layoutY="380.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile12" height="80" layoutX="174.0" layoutY="380.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile13" height="80" layoutX="264.0" layoutY="380.0" styleClass="rectanglePurple" width="80" />
-						<Rectangle fx:id="tile14" height="80" layoutX="354.0" layoutY="380.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile15" height="80" layoutX="444.0" layoutY="380.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile16" height="80" layoutX="534.0" layoutY="380.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile17" height="80.0" layoutX="624.0" layoutY="380.0" styleClass="rectanglePurple" width="80.0" />
-						<Rectangle fx:id="tile18" height="80" layoutX="-6.0" layoutY="471.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile19" height="80" layoutX="84.0" layoutY="560.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile20" height="80" layoutX="-6.0" layoutY="560.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile21" height="80" layoutX="444.0" layoutY="560.0" styleClass="rectanglePurple" width="80" />
-						<Rectangle fx:id="tile22" height="80" layoutX="354.0" layoutY="560.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile23" height="80" layoutX="264.0" layoutY="560.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile24" height="80" layoutX="174.0" layoutY="560.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile25" height="80" layoutX="624.0" layoutY="560.0" styleClass="rectanglePurple" width="80" />
-						<Rectangle fx:id="tile26" height="80" layoutX="534.0" layoutY="560.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile27" height="80" layoutX="354.0" layoutY="742.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile28" height="80" layoutX="444.0" layoutY="742.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile29" height="80" layoutX="534.0" layoutY="742.0" styleClass="rectanglePurple" width="80" />
-						<Rectangle fx:id="tile30" height="80" layoutX="624.0" layoutY="742.0" styleClass="rectangleYellow" width="80" />
-						<Rectangle fx:id="tile31" height="80" layoutX="624.0" layoutY="651.0" styleClass="rectangleBlue" width="80" />
-						<Rectangle fx:id="tile32" height="80" layoutX="84.0" layoutY="742.0" styleClass="rectangleGreen" width="80" />
-						<Rectangle fx:id="tile33" height="80" layoutX="174.0" layoutY="742.0" styleClass="rectanglePurple" width="80" />
-      						
-      						<Rectangle fx:id="tile1" height="110.0" layoutX="-41.0" layoutY="174.0" styleClass="start" width="114.0" />
-						<Rectangle fx:id="tile34" height="80" layoutX="264.0" layoutY="742.0" styleClass="rectangleYellow" width="80" />
-            			<Rectangle fx:id="tile35" height="110.0" layoutX="-41.0" layoutY="727.0" styleClass="start" width="114.0" />
-                      <!-- Animated Title -->
+<Rectangle fx:id="tile2" height="80" layoutX="84.0" layoutY="190.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile3" height="80" layoutX="174.0" layoutY="190.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile4" height="80" layoutX="264.0" layoutY="190.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile5" height="80" layoutX="354.0" layoutY="190.0" styleClass="Improbable" width="80" />
+<Rectangle fx:id="tile6" height="80" layoutX="444.0" layoutY="190.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile7" height="80" layoutX="534.0" layoutY="190.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile8" height="80" layoutX="624.0" layoutY="190.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile9" height="80" layoutX="624.0" layoutY="285.0" styleClass="Improbable" width="80" />
+<Rectangle fx:id="tile10" height="80" layoutX="-6.0" layoutY="380.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile11" height="80" layoutX="84.0" layoutY="380.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile12" height="80" layoutX="174.0" layoutY="380.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile13" height="80" layoutX="264.0" layoutY="380.0" styleClass="Improbable" width="80" />
+<Rectangle fx:id="tile14" height="80" layoutX="354.0" layoutY="380.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile15" height="80" layoutX="444.0" layoutY="380.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile16" height="80" layoutX="534.0" layoutY="380.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile17" height="80.0" layoutX="624.0" layoutY="380.0" styleClass="Improbable" width="80.0" />
+<Rectangle fx:id="tile18" height="80" layoutX="-6.0" layoutY="471.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile19" height="80" layoutX="84.0" layoutY="560.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile20" height="80" layoutX="-6.0" layoutY="560.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile21" height="80" layoutX="444.0" layoutY="560.0" styleClass="Improbable" width="80" />
+<Rectangle fx:id="tile22" height="80" layoutX="354.0" layoutY="560.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile23" height="80" layoutX="264.0" layoutY="560.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile24" height="80" layoutX="174.0" layoutY="560.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile25" height="80" layoutX="624.0" layoutY="560.0" styleClass="Improbable" width="80" />
+<Rectangle fx:id="tile26" height="80" layoutX="534.0" layoutY="560.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile27" height="80" layoutX="354.0" layoutY="742.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile28" height="80" layoutX="444.0" layoutY="742.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile29" height="80" layoutX="534.0" layoutY="742.0" styleClass="Improbable" width="80" />
+<Rectangle fx:id="tile30" height="80" layoutX="624.0" layoutY="742.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile31" height="80" layoutX="624.0" layoutY="651.0" styleClass="Informatics" width="80" />
+<Rectangle fx:id="tile32" height="80" layoutX="84.0" layoutY="742.0" styleClass="Education" width="80" />
+<Rectangle fx:id="tile33" height="80" layoutX="174.0" layoutY="742.0" styleClass="Improbable" width="80" />
+<Rectangle fx:id="tile1" height="110.0" layoutX="-41.0" layoutY="174.0" styleClass="start" width="114.0" />
+<Rectangle fx:id="tile34" height="80" layoutX="264.0" layoutY="742.0" styleClass="Entertainment" width="80" />
+<Rectangle fx:id="tile35" height="110.0" layoutX="-41.0" layoutY="727.0" styleClass="start" width="114.0" />
+<!-- Animated Title -->
+
                   <Text layoutX="94.0" layoutY="90.0" style="             -fx-font-size: 40px;              -fx-fill: linear-gradient(to right, cyan, rgb(138, 43, 226)); /* Cyan to dark purple gradient */             -fx-font-weight: bold;              -fx-stroke: fuchsia; /* Fuchsia text stroke */             -fx-stroke-width: 2;             -fx-effect: dropshadow(gaussian, cyan, 20, 0.6, 0, 0); /* Cyan shadow effect */             -fx-font-family: '/fonts/PressStart2P-Regular.ttf', sans-serif;           " text="TTMC - Arcade Edition" />
       				    <Circle fx:id="pion2" centerX="80" centerY="30" fill="blue" layoutX="-105.0" layoutY="200.0" radius="15" stroke="white" strokeWidth="2" />
 						<Circle fx:id="pion1" centerX="30" centerY="30" fill="red" layoutX="-14.0" layoutY="160.0" radius="15" stroke="white" strokeWidth="2" />

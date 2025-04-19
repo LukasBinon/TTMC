@@ -1,4 +1,4 @@
-.rectangleYellow {
+.Entertainment {
     -fx-fill: linear-gradient(to right, rgb(255, 215, 0), rgb(255, 223, 77)); 
     -fx-stroke: fuchsia;
     -fx-stroke-width: 4;
@@ -9,7 +9,7 @@
 
 
 
-.rectangleBlue {
+.Informatics {
     -fx-fill: linear-gradient(to right, rgb(0, 0, 139), rgb(0, 0, 205)); 
     -fx-stroke: fuchsia;
     -fx-stroke-width: 4;
@@ -18,7 +18,7 @@
     -fx-arc-height: 20;
 }
 
-.rectangleGreen {
+.Education {
     -fx-fill: linear-gradient(to right, rgb(64, 224, 208), rgb(0, 128, 128)); 
     -fx-stroke: fuchsia;
     -fx-stroke-width: 4;
@@ -27,7 +27,7 @@
     -fx-arc-height: 20;
 }
 
-.rectanglePurple {
+.Improbable{
     -fx-fill: linear-gradient(to right, rgb(75, 0, 130), rgb(138, 43, 226)); 
     -fx-stroke: fuchsia;
     -fx-stroke-width: 4;

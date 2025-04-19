@@ -50,8 +50,7 @@ public class Board extends Pane {
         // Charger le plateau de jeu
         createSnakeBoard();
 
-        // Placer les pions des joueurs
-        placePlayerTokens();
+      
     }
 
     public void start(Stage primaryStage) {
@@ -99,24 +98,6 @@ public class Board extends Pane {
     }
 
 
-    private void placePlayerTokens() {
-        if (playerConfigs == null || playerConfigs.isEmpty()) {
-            return;
-        }
 
-        // Position de départ (à ajuster selon la position de la première case)
-        double startX = 100; // Remplace par la vraie position de la case
-        double startY = 100; 
-
-        for (int i = 0; i < playerConfigs.size(); i++) {
-            PlayerConfig player = playerConfigs.get(i);
-
-            Circle token = new Circle(15); // Rayon du pion
-            token.setFill(ChoicePiece.COLORS[player.getColorIndex()]); // Appliquer la couleur choisie
-            token.setLayoutX(startX + (i * 20)); // Décalage pour éviter la superposition
-            token.setLayoutY(startY);
-
-            getChildren().add(token);
-        }
-    }
+    
 }

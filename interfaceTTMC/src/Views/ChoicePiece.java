@@ -201,7 +201,7 @@ public class ChoicePiece extends Application {
                 refreshUI(stage);  // Met à jour l'interface
             } else {
               
-                launchGame(stage);
+                launchGame();
             }
         });
 
@@ -252,17 +252,11 @@ public class ChoicePiece extends Application {
         
         }
 
-    public void launchGame(Stage stage) {
-        System.out.println("Launching game with " + totalPlayers + " players:");
-        for (PlayerConfig config : playerConfigs) {
-            System.out.println(config.getPlayerName() + 
-                " - " + SHAPES[config.getShapeIndex()] + 
-                " - " + COLORS[config.getColorIndex()]);
-        }
-        
-        stage.close();
-        Board board = new Board(new Stage(), playerConfigs);
-        board.start(new Stage());
+    private void launchGame() {
+        Stage stage = new Stage();
+        Board board = new Board(stage, playerConfigs);
+        stage.setFullScreen(true);
+        board.start(stage);
     }
 
     public Button createArcadeButton(String text) {

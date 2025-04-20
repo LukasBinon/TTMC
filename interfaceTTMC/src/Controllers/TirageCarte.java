@@ -34,7 +34,8 @@ public class TirageCarte {
     private Label answerLabel;
     @FXML
     private ListView<String> choicesList;
-    
+    @FXML
+    private Label cardTitle;
     @FXML
     private VBox rootPane; 
 
@@ -76,6 +77,10 @@ public class TirageCarte {
             difficultySelector.setValue("1");
             validerButton.setDisable(true);
             answerLabel.setVisible(false);
+            questionLabel.prefWidthProperty().bind(rootPane.widthProperty());
+            
+            cardTitle.setText(selectedTheme);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -104,7 +109,9 @@ public class TirageCarte {
 
             // Appliquer le thème CSS
             TirageCarte controller = loader.getController(); 
-            controller.applyTheme(selectedTheme);  
+            controller.applyTheme(selectedTheme); 
+            stage.setResizable(false);
+
 
             stage.show();
         } catch (IOException e) {

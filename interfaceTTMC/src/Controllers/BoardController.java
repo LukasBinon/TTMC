@@ -2,8 +2,10 @@ package Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.effect.Glow;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import models.Game;
 import models.PlayerConfig;
@@ -21,7 +23,7 @@ public class BoardController {
 
     private List<PlayerConfig> players;
     @FXML
-    private Circle pion1, pion2, pion3, pion4;
+    private Circle pion1, pion2, pion3, pion4, pion1b, pion2b, pion3b, pion4b;
     private Game game;
     private int currentPlayer;
     
@@ -29,8 +31,10 @@ public class BoardController {
     @FXML private Rectangle tile11, tile12, tile13, tile14, tile15, tile16, tile17, tile18, tile19, tile20;
     @FXML private Rectangle tile21, tile22, tile23, tile24, tile25, tile26, tile27, tile28, tile29, tile30;
     @FXML private Rectangle tile31, tile32, tile33, tile34, tile35;
+    @FXML private Text progressionPion1, progressionPion2, progressionPion3, progressionPion4;
 
     private Map<Integer, Node> tileMap = new HashMap<>();
+    private Glow glowEffect = new Glow(0.8);
 
     public void setPlayers(List<PlayerConfig> players) {
         this.players = players;
@@ -59,6 +63,16 @@ public class BoardController {
         positionPion(pion2, path2.get(0));
         positionPion(pion3, path3.get(0));
         positionPion(pion4, path4.get(0));
+    }
+    
+    
+    private void highlightPion(Circle pion) {
+        pion.setEffect(glowEffect);  
+    }
+
+    
+    private void removeGlowEffect(Circle pion) {
+        pion.setEffect(null);  
     }
     
     private String getThemeForPosition(int position) {
@@ -301,39 +315,88 @@ public class BoardController {
     // Méthode pour déplacer un pion d'une case à la suivante
     @FXML
     public void movePion1() {
+    	
+        removeGlowEffect(pion1b);
+        removeGlowEffect(pion2b);
+        removeGlowEffect(pion3b);
+        removeGlowEffect(pion4b);
+        
     	int pos = players.get(0).getPosition() + 1;
         if (pos < path1.size()) {
             players.get(0).setPosition(pos);;
             System.out.println(pos);
             positionPion(pion1, path1.get(pos));
         }
+        
+        highlightPion(pion1b);
+        
+     // Update the position of the text
+        progressionPion1.setText(String.valueOf(pos));
+        
+        
+
+     
     }
 
     @FXML
     public void movePion2() {
+    	
+        removeGlowEffect(pion1b);
+        removeGlowEffect(pion2b);
+        removeGlowEffect(pion3b);
+        removeGlowEffect(pion4b);
+        
     	int pos = players.get(1).getPosition() + 1;
         if (pos < path2.size()) {
             players.get(1).setPosition(pos);;
             positionPion(pion2, path2.get(pos));
         }
+        
+        highlightPion(pion2b);
+        
+        // Update the position of the text
+        progressionPion2.setText(String.valueOf(pos));
     }
 
     @FXML
     public void movePion3() {
+    	
+        removeGlowEffect(pion1b);
+        removeGlowEffect(pion2b);
+        removeGlowEffect(pion3b);
+        removeGlowEffect(pion4b);
+        
     	int pos = players.get(2).getPosition() + 1;
         if (pos < path3.size()) {
             players.get(2).setPosition(pos);;
             positionPion(pion3, path3.get(pos));
         }
+        
+        highlightPion(pion3b);
+        
+        // Update the position of the text
+        progressionPion3.setText(String.valueOf(pos));
     }
 
     @FXML
     public void movePion4() {
+        
+    	removeGlowEffect(pion1b);
+        removeGlowEffect(pion2b);
+        removeGlowEffect(pion3b);
+        removeGlowEffect(pion4b);
+        
+        
     	int pos = players.get(3).getPosition() + 1;
         if (pos < path4.size()) {
             players.get(3).setPosition(pos);;
             positionPion(pion4, path4.get(pos));
         }
+        
+        highlightPion(pion4b);
+        
+        // Update the position of the text
+        progressionPion4.setText(String.valueOf(pos));
     }
     
     @FXML

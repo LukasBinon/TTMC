@@ -6,9 +6,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
-import javafx.scene.shape.Circle;
+
 import javafx.stage.Stage;
-import Views.ChoicePiece;
+
 import Views.Menu;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class Board extends Pane {
     
     private Menu menu;
     private List<PlayerConfig> playerConfigs; // Liste des joueurs
-    private Game game;
+  
 
     public Board(Stage primaryStage, List<PlayerConfig> playerConfigs) {
         this.playerConfigs = playerConfigs; // Stocke la configuration des joueurs
@@ -52,6 +52,8 @@ public class Board extends Pane {
 
       
     }
+    
+   
 
     public void start(Stage primaryStage) {
         // Création de la scène

@@ -253,6 +253,11 @@ public class ChoicePiece extends Application {
         }
 
     private void launchGame() {
+       
+        Stage currentStage = (Stage) titleLabel.getScene().getWindow();
+        currentStage.close();  
+
+        
         Stage stage = new Stage();
         Board board = new Board(stage, playerConfigs);
         stage.setFullScreen(true);

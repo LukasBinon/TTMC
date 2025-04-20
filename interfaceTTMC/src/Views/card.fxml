@@ -3,11 +3,33 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml"  fx:id="rootPane" fx:controller="Controllers.TirageCarte" spacing="10" style="-fx-padding: 20; -fx-font-size: 14px;">
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:id="rootPane"
+      fx:controller="Controllers.TirageCarte"
+      spacing="10"
+      prefWidth="400"
+      prefHeight="600"
+      style="-fx-padding: 20; -fx-font-size: 14px; -fx-background-color: #2E2E2E;">
+
+    
+    <Label fx:id="cardTitle" text="Education" style="-fx-font-size: 20px; -fx-text-fill: #FFD700;"/>
+
     <ComboBox fx:id="difficultySelector" />
-    <Button fx:id="drawButton" text="Tirer une question" onAction="#handleDrawButton"/>
-    <Label fx:id="questionLabel" text="❓ Question affichée ici"/>
+
+    <Button fx:id="drawButton" text="Draw a question" onAction="#handleDrawButton"/>
+
+    <ScrollPane fitToWidth="true" prefHeight="100" maxHeight="150">
+        <Label fx:id="questionLabel"
+               text="❓ Displayed question here"
+               wrapText="true"
+               maxWidth="460"/>
+    </ScrollPane>
+
     <ListView fx:id="choicesList" />
-    <Button fx:id="validerButton" text="Valider" onAction="#handleValidateButton"/>
-    <Label fx:id="answerLabel" text="✔️ Réponse : ???" visible="false"/>
+
+    <Button fx:id="validerButton" text="Validate" onAction="#handleValidateButton"/>
+
+    <Label fx:id="answerLabel"
+           text="✔️ Answer: ???"
+           visible="false"/>
 </VBox>

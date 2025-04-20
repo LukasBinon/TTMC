@@ -1,98 +1,81 @@
 package Views;
 
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import Controllers.MenuController;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Menu {
-    private Stage menuStage; // Independent window for the menu
-    private static final String FONT_PATH = "/fonts/PressStart2P-Regular.ttf"; // Path to Arcade font
+
+    private VBox root;
+    private Text titleLabel;
+    private Button btnResume;
+    private Button btnMainMenu;
+    private Button btnQuit;
+
+    private Stage menuStage;
+    private static final String FONT_PATH = "/fonts/PressStart2P-Regular.ttf";
 
     public Menu(Stage ownerStage) {
-        // Create a new stage for the menu
+        // Création du Stage
         menuStage = new Stage();
-        menuStage.initStyle(StageStyle.UNDECORATED); // Removes title bar
-        menuStage.initModality(Modality.APPLICATION_MODAL); // Blocks interaction with the main window
-        menuStage.initOwner(ownerStage); // Makes the board window the owner
+        menuStage.initStyle(StageStyle.UNDECORATED);
+        menuStage.initModality(Modality.APPLICATION_MODAL);
+        menuStage.initOwner(ownerStage);
 
-        // Title at the top
-        Text titleLabel = new Text("How much do you spend");
-        titleLabel.setFill(Color.YELLOW);
-        titleLabel.setStroke(Color.RED);
-        titleLabel.setStrokeWidth(2);
-        titleLabel.setEffect(new DropShadow(20, Color.RED));
+        // Contrôleur
+        MenuController controller = new MenuController(menuStage);
 
-        // Load Arcade font
-        Font arcadeFont = Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 30);
-        if (arcadeFont != null) {
-            titleLabel.setFont(arcadeFont);
-        } else {
-            System.err.println("Error: Font not loaded for title label.");
-        }
+        // Construction UI
+        root = new VBox(20);
+        root.setPadding(new Insets(30, 20, 30, 20));
+        root.setAlignment(Pos.TOP_CENTER);
+        root.getStyleClass().add("root"); // Ajoute la classe 'root' pour appliquer le CSS
 
-        // Menu container
-        VBox menuBox = new VBox(20);
-        menuBox.setPadding(new Insets(30, 20, 30, 20));
-        menuBox.setStyle("-fx-background-color: rgba(0, 0, 0, 0.9); -fx-border-color: yellow; -fx-border-width: 5;");
-        menuBox.setAlignment(Pos.TOP_CENTER);
+        // Titre
+        titleLabel = new Text("How much do you spend");
+        titleLabel.getStyleClass().add("title-label");
 
-        // Add buttons to the menu
-        Button btnResume = createArcadeButton("Resume Game");
-        Button btnMainMenu = createArcadeButton("Back to Main Menu");
-        Button btnQuit = createArcadeButton("Quit Game");
+        Font arcadeFontTitle = Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 30);
+        Font arcadeFontButtons = Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 25);
+        if (arcadeFontTitle != null) titleLabel.setFont(arcadeFontTitle);
 
-        // Button actions
-        btnResume.setOnAction(e -> menuStage.close()); // Closes the menu window
-        btnMainMenu.setOnAction(e -> System.out.println("Returning to main menu..."));
-        btnQuit.setOnAction(e -> System.exit(0)); // Exits the application
+        // Boutons
+        btnResume = createButton("Resume Game", arcadeFontButtons);
+        btnMainMenu = createButton("Back to Main Menu", arcadeFontButtons);
+        btnQuit = createButton("Quit Game", arcadeFontButtons);
 
-        menuBox.getChildren().addAll(titleLabel, btnResume, btnMainMenu, btnQuit);
+        // Actions
+        btnResume.setOnAction(e -> controller.onResume());
+        btnMainMenu.setOnAction(e -> controller.onMainMenu(menuStage));
+        btnQuit.setOnAction(e -> controller.onQuit());
 
-        // Add the menu to the scene
-        Scene scene = new Scene(menuBox, 700, 400); // Dimensions for the menu window
+        root.getChildren().addAll(titleLabel, btnResume, btnMainMenu, btnQuit);
+
+        // Scène
+        Scene scene = new Scene(root, 700, 400);
+        scene.getStylesheets().add(getClass().getResource("/Views/menu.css").toExternalForm()); // Lien avec le CSS
         menuStage.setScene(scene);
     }
 
+    
+    private Button createButton(String text, Font font) {
+        Button button = new Button(text);
+        button.setFont(font);
+        button.getStyleClass().add("arcade-button");
+        return button;
+    }
+
     public void showMenu() {
-        // Show the menu window if it's not already showing
         if (!menuStage.isShowing()) {
             menuStage.show();
         }
-    }
-
-    private Button createArcadeButton(String text) {
-        Button button = new Button(text);
-
-        Font arcadeFont = Font.loadFont(getClass().getResourceAsStream(FONT_PATH), 25);
-        if (arcadeFont != null) {
-            button.setFont(arcadeFont);
-        } else {
-            System.err.println("Error: Font not loaded for button.");
-        }
-
-        button.setTextFill(Color.WHITE);
-        button.setStyle("-fx-background-color: transparent;");
-        button.setPadding(new Insets(10, 20, 10, 20));
-
-        // Hover effects
-        button.setOnMouseEntered(e -> {
-            button.setEffect(new DropShadow(10, Color.YELLOW));
-            button.setTextFill(Color.RED);
-        });
-        button.setOnMouseExited(e -> {
-            button.setEffect(null);
-            button.setTextFill(Color.WHITE);
-        });
-
-        return button;
     }
 }

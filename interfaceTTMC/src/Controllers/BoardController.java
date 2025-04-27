@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import models.Game;
 import models.PlayerConfig;
 
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -429,11 +429,7 @@ public class BoardController {
             game.verifyEndGame();
         } else {
             GameMenu gameMenu = new GameMenu();
-            try {
-                gameMenu.start(new Stage());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            gameMenu.start(new Stage());
         }
     
     }

@@ -1,7 +1,7 @@
 package Controllers;
 
 
-import java.io.IOException;
+
 
 import Views.GameMenu;
 import javafx.stage.Stage;
@@ -34,12 +34,7 @@ public class MenuController {
 	    // Créer un nouveau stage pour le GameMenu
 	    Stage gameStage = new Stage();
 	    
-	    // Tente de démarrer le GameMenu
-	    try {
-	        gmenu.start(gameStage);
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
+	    gmenu.start(gameStage);
 	}
 
 

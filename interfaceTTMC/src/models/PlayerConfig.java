@@ -1,6 +1,9 @@
 package models;
 
 import javafx.scene.shape.Circle;
+import strategy.HardMovement;
+import strategy.MovementStrategy;
+import strategy.NormalMovement;
 
 public class PlayerConfig {
 	
@@ -9,13 +12,22 @@ public class PlayerConfig {
         private int colorIndex;
         private int position;
         private boolean finished;
+        private MovementStrategy movementStrategy;
         
-        public PlayerConfig(String name, int shape, int color) {
+        public PlayerConfig(String name, int shape, int color, EDifficulty difficulty) {
             this.playerName = name;
             this.shapeIndex = shape;
             this.colorIndex = color;
             this.position = 0;
             this.finished = false;
+            this.movementStrategy = switch(difficulty) {
+	            case NORMAL -> new NormalMovement();
+	            case HARD -> new HardMovement();
+            };
+        }
+        
+        public void move(int steps) {
+        	movementStrategy.move(this, steps);
         }
 
 		public String getPlayerName() {

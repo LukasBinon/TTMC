@@ -5,6 +5,7 @@ import java.util.List;
 public class Game {
 	public final int MAX_POSITION = 35;
 	private boolean finished;
+	private static EDifficulty difficulty = EDifficulty.NORMAL;
 	private List<PlayerConfig> players;
 	
 	public Game(List<PlayerConfig> players) {
@@ -22,15 +23,28 @@ public class Game {
 	
 	public void verifyEndGame() {
 		int nbPlayerFinished = 0;
-		for(PlayerConfig p : players) {
-			System.out.println(p.getPosition());
-			if(p.getPosition() == MAX_POSITION - 1)
-				p.setFinished();
-			if(p.isFinished())
-				nbPlayerFinished++;
+		if(players.size() != 1) {
+			for(PlayerConfig p : players) {
+				if(p.getPosition() == MAX_POSITION - 1)
+					p.setFinished();
+				if(p.isFinished())
+					nbPlayerFinished++;
+			}
+			finished = (nbPlayerFinished == (players.size() - 1))?true:false;
+		} else {
+			PlayerConfig player = players.get(0);
+			if(player.getPosition() == MAX_POSITION - 1)
+				player.setFinished();
+			finished = player.isFinished();
 		}
-		finished = (nbPlayerFinished == (players.size() - 1))?true:false;
 	}
 	
+	public static void setDifficulty(EDifficulty diff) {
+		difficulty = diff;
+	}
+	
+	public static EDifficulty getDifficulty() {
+		return difficulty;
+	}
 	
 }

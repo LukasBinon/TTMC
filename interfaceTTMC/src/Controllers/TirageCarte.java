@@ -43,8 +43,19 @@ public class TirageCarte {
     private Question currentQuestion;
     private Card card;
     private static String selectedTheme = "Education";
+    private static boolean used = false;
+    private boolean correctAnswer = false;
+    private Stage stage;
 
-    @FXML
+    public static boolean isUsed() {
+		return used;
+	}
+
+	public static void setUsed(boolean used) {
+		TirageCarte.used = used;
+	}
+
+	@FXML
     public void initialize() {
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -88,7 +99,7 @@ public class TirageCarte {
         
     }
     
-    private void applyTheme(String theme) {
+    public void applyTheme(String theme) {
         String cssPath = "/views/" + theme.toLowerCase() + ".css";  // Charger le CSS depuis views/ plutôt que styles/
 		Scene scene = rootPane.getScene();  // Récupère la scène de la vue
         if (scene != null) {
@@ -97,12 +108,12 @@ public class TirageCarte {
         }
     }
     
-    public static void start() {
+    public void start() {
         try {
             FXMLLoader loader = new FXMLLoader(TirageCarte.class.getResource("/views/card.fxml"));
             Parent root = loader.load();
 
-            Stage stage = new Stage();
+            stage = new Stage();
             stage.setTitle("Carte - Thème : " + selectedTheme);
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -112,7 +123,7 @@ public class TirageCarte {
             controller.applyTheme(selectedTheme); 
             stage.setResizable(false);
 
-
+            setUsed(true);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -130,20 +141,48 @@ public class TirageCarte {
         answerLabel.setText("✔️ Réponse : ???");
         answerLabel.setVisible(false);
         validerButton.setDisable(false);
+        difficultySelector.setDisable(true);
         drawButton.setDisable(true);
     }
 
     @FXML
     private void handleValidateButton() {
         if (currentQuestion != null) {
-            answerLabel.setText("✔️ Réponse : " + currentQuestion.getAnswer());
+            String selectedChoice = choicesList.getSelectionModel().getSelectedItem(); // ← valeur sélectionnée
+
+            if (selectedChoice != null && selectedChoice.equals(currentQuestion.getAnswer())) {
+                correctAnswer = true;
+                answerLabel.setText("✔️ Bonne réponse !");
+            } else {
+                correctAnswer = false;
+                answerLabel.setText("❌ Mauvaise réponse. La bonne réponse était : " + currentQuestion.getAnswer());
+            }
+
             answerLabel.setVisible(true);
             validerButton.setDisable(true);
-            drawButton.setDisable(false);
+            drawButton.setDisable(true);
+            setUsed(false);
         }
     }
 
+
     public static void setThemeSelected(String theme) {
         selectedTheme = theme;
+    }
+    
+    public Stage getStage() {
+    	return stage;
+    }
+    
+    public void setStage(Stage stage) {
+    	this.stage = stage;
+    }
+    
+    public Question getCurrentQuestion() {
+    	return currentQuestion;
+    }
+    
+    public boolean getCorrectAnswer() {
+    	return correctAnswer;
     }
 }

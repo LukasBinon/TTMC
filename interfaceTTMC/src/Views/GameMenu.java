@@ -23,6 +23,7 @@ public class GameMenu {
     private TextField playerInput;
     private Button startButton;
     private Button rulesButton;
+    private Button difficultyButton;
     private Button quitButton;
     private Button musicToggleButton;
 
@@ -58,6 +59,10 @@ public class GameMenu {
 
     public Button getRulesButton() {
         return rulesButton;
+    }
+    
+    public Button getDifficultyButton() {
+    	return difficultyButton;
     }
 
     public Button getQuitButton() {
@@ -137,13 +142,14 @@ public class GameMenu {
         playerInput.setTextFormatter(formatter);
 
         startButton = createArcadeButton("Start Game");
+        difficultyButton = createArcadeButton("Normal");
         rulesButton = createArcadeButton("See Rules");
         quitButton = createArcadeButton("Quit");
 
         VBox menuBox = new VBox(15);
         menuBox.setAlignment(Pos.CENTER);
         menuBox.setPadding(new Insets(-30, 0, 0, 0));
-        menuBox.getChildren().addAll(playerLabel, playerInput, startButton, rulesButton, quitButton);
+        menuBox.getChildren().addAll(playerLabel, playerInput, startButton, difficultyButton, rulesButton, quitButton);
 
         return menuBox;
     }

@@ -1,7 +1,11 @@
 package Controllers;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.effect.Glow;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -9,8 +13,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import models.Game;
 import models.PlayerConfig;
+import models.Question;
 
-
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -313,126 +318,140 @@ public class BoardController {
 
 
     // Méthode pour déplacer un pion d'une case à la suivante
-    @FXML
-    public void movePion1() {
-    	
+    public void movePions(int pionIndex, int steps) {
+        // Enlève l'effet lumineux sur tous les pions
         removeGlowEffect(pion1b);
         removeGlowEffect(pion2b);
         removeGlowEffect(pion3b);
         removeGlowEffect(pion4b);
+
+        PlayerConfig player = players.get(pionIndex);
+        // Avance d'une case
+        int pos = player.getPosition() + steps;
+        Circle pion = getPionCircle(pionIndex);
         
-    	int pos = players.get(0).getPosition() + 1;
-        if (pos < path1.size()) {
-            players.get(0).setPosition(pos);;
-            System.out.println(pos);
-            positionPion(pion1, path1.get(pos));
+        List<List<Double>> path = getPathForPion(pionIndex);
+        if (pos < path.size() && pos > 0) {
+            player.move(steps);
+            positionPion(pion, path.get(player.getPosition()));
+        } else if(pos >= path.size()) {
+        	player.setPosition(game.MAX_POSITION-1);
+        	positionPion(pion, path.get(player.getPosition()));
+        } else if(pos <= 0) {
+        	player.setPosition(0);
+        	positionPion(pion, path.get(player.getPosition()));
         }
         
-        highlightPion(pion1b);
-        
-     // Update the position of the text
-        progressionPion1.setText(String.valueOf(pos));
-        
-        
+        // Remet l'effet lumineux sur le bon bouton
+        highlightPion(getPionHighlight(pionIndex));
 
-     
+        // Met à jour le texte de progression
+        updateProgressionText(pionIndex, pos);
     }
 
-    @FXML
-    public void movePion2() {
-    	
-        removeGlowEffect(pion1b);
-        removeGlowEffect(pion2b);
-        removeGlowEffect(pion3b);
-        removeGlowEffect(pion4b);
-        
-    	int pos = players.get(1).getPosition() + 1;
-        if (pos < path2.size()) {
-            players.get(1).setPosition(pos);;
-            positionPion(pion2, path2.get(pos));
+    // Petite méthode utilitaire pour récupérer le bon chemin
+    private List<List<Double>> getPathForPion(int pionIndex) {
+        switch (pionIndex) {
+            case 0: return path1;
+            case 1: return path2;
+            case 2: return path3;
+            case 3: return path4;
+            default: throw new IllegalArgumentException("Invalid pion index");
         }
-        
-        highlightPion(pion2b);
-        
-        // Update the position of the text
-        progressionPion2.setText(String.valueOf(pos));
     }
 
-    @FXML
-    public void movePion3() {
-    	
-        removeGlowEffect(pion1b);
-        removeGlowEffect(pion2b);
-        removeGlowEffect(pion3b);
-        removeGlowEffect(pion4b);
-        
-    	int pos = players.get(2).getPosition() + 1;
-        if (pos < path3.size()) {
-            players.get(2).setPosition(pos);;
-            positionPion(pion3, path3.get(pos));
+    // Petite méthode utilitaire pour récupérer l'ImageView du pion
+    private Circle getPionCircle(int pionIndex) {
+        switch (pionIndex) {
+            case 0: return pion1;
+            case 1: return pion2;
+            case 2: return pion3;
+            case 3: return pion4;
+            default: throw new IllegalArgumentException("Invalid pion index");
         }
-        
-        highlightPion(pion3b);
-        
-        // Update the position of the text
-        progressionPion3.setText(String.valueOf(pos));
     }
 
-    @FXML
-    public void movePion4() {
-        
-    	removeGlowEffect(pion1b);
-        removeGlowEffect(pion2b);
-        removeGlowEffect(pion3b);
-        removeGlowEffect(pion4b);
-        
-        
-    	int pos = players.get(3).getPosition() + 1;
-        if (pos < path4.size()) {
-            players.get(3).setPosition(pos);;
-            positionPion(pion4, path4.get(pos));
+    // Petite méthode utilitaire pour récupérer le bouton du pion
+    private Circle getPionHighlight(int pionIndex) {
+        switch (pionIndex) {
+            case 0: return pion1b;
+            case 1: return pion2b;
+            case 2: return pion3b;
+            case 3: return pion4b;
+            default: throw new IllegalArgumentException("Invalid pion index");
         }
-        
-        highlightPion(pion4b);
-        
-        // Update the position of the text
-        progressionPion4.setText(String.valueOf(pos));
     }
+
+    // Petite méthode utilitaire pour mettre à jour le texte de progression
+    private void updateProgressionText(int pionIndex, int pos) {
+        switch (pionIndex) {
+            case 0: progressionPion1.setText(String.valueOf(pos)); break;
+            case 1: progressionPion2.setText(String.valueOf(pos)); break;
+            case 2: progressionPion3.setText(String.valueOf(pos)); break;
+            case 3: progressionPion4.setText(String.valueOf(pos)); break;
+            default: throw new IllegalArgumentException("Invalid pion index");
+        }
+    }
+
     
     @FXML
     public void movePion() {
-        if (!game.isFinished()) {
-            // Déplace le pion du joueur actuel
-            switch(currentPlayer) {
-                case 0: movePion1(); break;
-                case 1: movePion2(); break;
-                case 2: movePion3(); break;
-                case 3: movePion4(); break;
+        if (!TirageCarte.isUsed()) {
+            if (!game.isFinished()) {
+                int playerIndex = currentPlayer;
+                int currentPosition = players.get(playerIndex).getPosition();
+
+                String theme = getThemeForPosition(currentPosition);
+                TirageCarte.setThemeSelected(theme);
+                TirageCarte.setUsed(true);
+
+                try {
+                    // Chargement du FXML et récupération du vrai contrôleur
+                    FXMLLoader loader = new FXMLLoader(TirageCarte.class.getResource("/views/card.fxml"));
+                    Parent root = loader.load();
+                    TirageCarte controller = loader.getController();
+
+                    Stage stage = new Stage();
+                    stage.setTitle("Carte - Thème : " + theme);
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+
+                    controller.setStage(stage); // Important pour que getStage() fonctionne
+                    controller.applyTheme(theme);
+                    stage.setResizable(false);
+                    stage.show();
+
+                    // Quand la fenêtre se ferme, on agit
+                    stage.setOnHidden(e -> {
+                        Platform.runLater(() -> {
+                            Question q = controller.getCurrentQuestion();
+                            if (q != null) {
+                            	if(controller.getCorrectAnswer())
+                            		movePions(playerIndex, q.getPriority());
+                            	else {
+                            		movePions(playerIndex, - q.getPriority());
+                            	}
+                            }
+
+                            updateProgressionText(playerIndex, players.get(playerIndex).getPosition());
+                            currentPlayer = (currentPlayer + 1) % players.size();
+                            game.verifyEndGame();
+                            TirageCarte.setUsed(false);
+                        });
+                    });
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+                GameMenu gameMenu = new GameMenu();
+                gameMenu.start(new Stage());
             }
-            
-            // Récupère la position actuelle du joueur
-            int currentPosition = players.get(currentPlayer).getPosition();
-            
-            // Ouvre la carte avec le thème correspondant
-            String theme = getThemeForPosition(currentPosition);
-            TirageCarte.setThemeSelected(theme);
-            
-            try {
-                new TirageCarte();
-				TirageCarte.start();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            
-            // Passer au joueur suivant
-            currentPlayer = (currentPlayer + 1) % players.size();
-            game.verifyEndGame();
-        } else {
-            GameMenu gameMenu = new GameMenu();
-            gameMenu.start(new Stage());
         }
-    
     }
+
+
 
 
 }

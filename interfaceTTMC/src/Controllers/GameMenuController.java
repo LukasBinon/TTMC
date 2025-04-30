@@ -3,9 +3,12 @@ package Controllers;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import models.EDifficulty;
+import models.Game;
 
 import java.net.URL;
 
@@ -45,6 +48,7 @@ public class GameMenuController {
             }
         });
         view.getRulesButton().setOnAction(e -> showRules());
+        view.getDifficultyButton().setOnAction(e -> configDifficulty());
         view.getQuitButton().setOnAction(e -> leave());
         view.getMusicToggleButton().setOnAction(e -> toggleMusic());
     }
@@ -109,7 +113,18 @@ public class GameMenuController {
         });
     }
 
-
+    public void configDifficulty() {
+    	Button button = view.getDifficultyButton();
+    	if(Game.getDifficulty() == EDifficulty.NORMAL) {
+    		button.setText("Hard");
+    		Game.setDifficulty(EDifficulty.HARD);
+    	}
+    	else {
+    		button.setText("Normal");
+    		Game.setDifficulty(EDifficulty.NORMAL);
+    	}
+    	
+    }
 
 
     public void startGame(int playerCount) {

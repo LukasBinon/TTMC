@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 import models.PlayerConfig;
 import Views.ChoicePiece;
 import models.Board;
+import models.Game;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,8 @@ public class ChoicePieceController {
             playerConfigs.add(new PlayerConfig(
                 "Player " + (i + 1),
                 i % SHAPES.length,
-                i % COLORS.length
+                i % COLORS.length,
+                Game.getDifficulty()
             ));
         }
     }

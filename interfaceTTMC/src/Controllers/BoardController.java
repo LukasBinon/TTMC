@@ -7,10 +7,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.effect.Glow;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import models.Game;
 import models.PlayerConfig;
 import models.Question;
@@ -28,7 +34,8 @@ public class BoardController {
 
     private List<PlayerConfig> players;
     @FXML
-    private Circle pion1, pion2, pion3, pion4, pion1b, pion2b, pion3b, pion4b;
+    private Pane pion1b, pion2b, pion3b, pion4b;
+    @FXML private Pane pionContainer1, pionContainer2, pionContainer3, pionContainer4;
     private Game game;
     private int currentPlayer;
     
@@ -62,21 +69,16 @@ public class BoardController {
         path4 = createPath4();
         
         initializeTileMap();
-
-        // Initialiser les positions de départ des pions
-        positionPion(pion1, path1.get(0));
-        positionPion(pion2, path2.get(0));
-        positionPion(pion3, path3.get(0));
-        positionPion(pion4, path4.get(0));
+        
     }
     
     
-    private void highlightPion(Circle pion) {
+    private void highlightPion(Pane pion) {
         pion.setEffect(glowEffect);  
     }
 
     
-    private void removeGlowEffect(Circle pion) {
+    private void removeGlowEffect(Pane pion) {
         pion.setEffect(null);  
     }
     
@@ -142,17 +144,104 @@ public class BoardController {
         tileMap.put(35, tile35);
     }
     
-    public void initializePion() {
+    public void initializePawnView(Pane pane, PlayerConfig player) {
+        Shape shape = null;
+
+        switch (player.getShapeIndex()) {
+            case 0:
+                // Cercle : rayon de 15, diamètre 30
+                Circle circle = new Circle(14);
+                circle.setStroke(Color.WHITE);
+                circle.setStrokeWidth(2);
+                circle.setCenterX(30);  // Centré dans le conteneur 60x60
+                circle.setCenterY(30);  // Centré dans le conteneur 60x60
+                shape = circle;
+                break;
+
+            case 1:
+                // Carré : côté de 30 (rayon de 15)
+                Rectangle rectangle = new Rectangle(25, 25);
+                rectangle.setStroke(Color.WHITE);
+                rectangle.setStrokeWidth(2);
+                rectangle.setX(17.5);  // Centré dans le conteneur 60x60
+                rectangle.setY(17.5);  // Centré dans le conteneur 60x60
+                shape = rectangle;
+                break;
+
+            case 2:
+                // Triangle : ajusté pour avoir une base de 30 (rayon de 15)
+                Polygon triangle = new Polygon();
+                triangle.getPoints().addAll(
+                    30.0, 10.0,   // Point supérieur (sommet) : centré horizontalement, à 10px du haut
+                    45.0, 40.0,   // Point bas droit
+                    15.0, 40.0    // Point bas gauche
+                );
+                triangle.setStroke(Color.WHITE);
+                triangle.setStrokeWidth(2);
+                shape = triangle;
+                break;
+        }
+
+        // Changer la couleur selon l'index
+        switch(player.getColorIndex()) {
+            case 0: shape.setFill(Color.RED); break;
+            case 1: shape.setFill(Color.GREEN); break;
+            case 2: shape.setFill(Color.BLUE); break;
+            default: shape.setFill(Color.YELLOW); break;
+        }
+
+        // Ajouter la forme au pane
+        if (shape != null) {
+            pane.getChildren().clear(); // En cas de changement
+            pane.getChildren().add(shape);
+        }
+    }
+
+    
+    public void initializePion() {	
     	int nbPlayers = players.size();
-    	if(nbPlayers < 4) pion4.setVisible(false);
-    	if(nbPlayers < 3) pion3.setVisible(false);
-    	if(nbPlayers < 2) pion2.setVisible(false);
+    	if(nbPlayers == 4) {
+        	initializePawnView(pionContainer4, players.get(3));
+        	initializePawnView(pion4b, players.get(3));
+        }
+        if(nbPlayers >= 3) {
+        	initializePawnView(pionContainer3, players.get(2));
+        	initializePawnView(pion3b, players.get(2));
+        }
+        if(nbPlayers >= 2) {
+        	initializePawnView(pionContainer2, players.get(1));
+        	initializePawnView(pion2b, players.get(1));
+        }
+        initializePawnView(pionContainer1, players.get(0));
+        initializePawnView(pion1b, players.get(0));
+        
+        positionPion(pionContainer1, path1.get(0));
+        positionPion(pionContainer2, path2.get(0));
+        positionPion(pionContainer3, path3.get(0));
+        positionPion(pionContainer4, path4.get(0));
+        
+    	if(nbPlayers < 4) {
+    		pionContainer4.setVisible(false);
+    		pion4b.setVisible(false);
+    		progressionPion4.setVisible(false);
+    		
+    	}
+    	if(nbPlayers < 3) {
+    		pionContainer3.setVisible(false);
+    		pion3b.setVisible(false);
+    		progressionPion3.setVisible(false);
+    	}
+    	if(nbPlayers < 2) {
+    		pionContainer2.setVisible(false);
+    		pion2b.setVisible(false);
+    		progressionPion2.setVisible(false);
+    	}
     }
 
     // Créer les chemins pour chaque pion (chemin 1 à 4)
     private List<List<Double>> createPath1() {
         List<List<Double>> path = new ArrayList<>();
-        path.add(List.of(-16.0, 160.0));
+        path.add(List.of(-14.0, 160.0));
         path.add(List.of(94.0, 176.0));
         path.add(List.of(184.0, 176.0));
         path.add(List.of(274.0, 176.0));
@@ -190,128 +279,131 @@ public class BoardController {
         return path;
     }
 
+
     private List<List<Double>> createPath2() {
         List<List<Double>> path = new ArrayList<>();
-        path.add(List.of(-105.0, 199.0));
-        path.add(List.of(20.0, 199.0));
-        path.add(List.of(110.0, 199.0));
-        path.add(List.of(200.0, 199.0));
-        path.add(List.of(290.0, 199.0));
-        path.add(List.of(380.0, 199.0));
-        path.add(List.of(470.0, 199.0));
-        path.add(List.of(560.0, 199.0));
-        path.add(List.of(560.0, 295.0));
-        path.add(List.of(560.0, 390.0));
-        path.add(List.of(470.0, 390.0));
-        path.add(List.of(380.0, 390.0));
-        path.add(List.of(290.0, 390.0));
-        path.add(List.of(200.0, 390.0));
-        path.add(List.of(110.0, 390.0));
-        path.add(List.of(20.0, 390.0));
-        path.add(List.of(-70.0, 390.0));
-        path.add(List.of(-70.0, 480.0));
-        path.add(List.of(-70.0, 570.0));
-        path.add(List.of(20.0, 570.0));
-        path.add(List.of(110.0, 570.0));
-        path.add(List.of(200.0, 570.0));
-        path.add(List.of(290.0, 570.0));
-        path.add(List.of(380.0, 570.0));
-        path.add(List.of(470.0, 570.0));
-        path.add(List.of(560.0, 570.0));
-        path.add(List.of(560.0, 660.0));
-        path.add(List.of(560.0, 750.0));
-        path.add(List.of(470.0, 750.0));
-        path.add(List.of(380.0, 750.0));
-        path.add(List.of(290.0, 750.0));
-        path.add(List.of(200.0, 750.0));
-        path.add(List.of(110.0, 750.0));
-        path.add(List.of(20.0, 750.0));
-        path.add(List.of(-105.0, 750.0));
+        path.add(List.of(-55.0, 200.0));  // point 1
+        path.add(List.of(70.0, 199.0));   // point 2
+        path.add(List.of(160.0, 199.0));  // point 3
+        path.add(List.of(250.0, 199.0));
+        path.add(List.of(340.0, 199.0));
+        path.add(List.of(430.0, 199.0));
+        path.add(List.of(520.0, 199.0));
+        path.add(List.of(610.0, 199.0));
+        path.add(List.of(610.0, 294.0));
+        path.add(List.of(610.0, 389.0));
+        path.add(List.of(520.0, 389.0));
+        path.add(List.of(430.0, 389.0));
+        path.add(List.of(340.0, 389.0));
+        path.add(List.of(250.0, 389.0));
+        path.add(List.of(160.0, 389.0));
+        path.add(List.of(70.0, 389.0));
+        path.add(List.of(-20.0, 389.0));
+        path.add(List.of(-20.0, 479.0));
+        path.add(List.of(-20.0, 569.0));
+        path.add(List.of(70.0, 569.0));
+        path.add(List.of(160.0, 569.0));
+        path.add(List.of(250.0, 569.0));
+        path.add(List.of(340.0, 569.0));
+        path.add(List.of(430.0, 569.0));
+        path.add(List.of(520.0, 569.0));
+        path.add(List.of(610.0, 569.0));
+        path.add(List.of(610.0, 659.0));
+        path.add(List.of(610.0, 749.0));
+        path.add(List.of(520.0, 749.0));
+        path.add(List.of(430.0, 749.0));
+        path.add(List.of(340.0, 749.0));
+        path.add(List.of(250.0, 749.0));
+        path.add(List.of(160.0, 749.0));
+        path.add(List.of(70.0, 749.0));
+        path.add(List.of(-10.0, 735.0));
         return path;
     }
-
 
     private List<List<Double>> createPath3() {
         List<List<Double>> path = new ArrayList<>();
-        path.add(List.of(-16.0, 190.0));
-        path.add(List.of(94.0, 174.0));
-        path.add(List.of(184.0, 174.0));
-        path.add(List.of(274.0, 174.0));
-        path.add(List.of(364.0, 174.0));
-        path.add(List.of(454.0, 174.0));
-        path.add(List.of(544.0, 174.0));
-        path.add(List.of(634.0, 174.0));
-        path.add(List.of(634.0, 269.0));
-        path.add(List.of(634.0, 364.0));
-        path.add(List.of(544.0, 364.0));
-        path.add(List.of(454.0, 364.0));
-        path.add(List.of(364.0, 364.0));
-        path.add(List.of(274.0, 364.0));
-        path.add(List.of(184.0, 364.0));
-        path.add(List.of(94.0, 364.0));
-        path.add(List.of(4.0, 364.0));
-        path.add(List.of(4.0, 454.0));
-        path.add(List.of(4.0, 544.0));
-        path.add(List.of(94.0, 544.0));
-        path.add(List.of(184.0, 544.0));
-        path.add(List.of(274.0, 544.0));
-        path.add(List.of(364.0, 544.0));
-        path.add(List.of(454.0, 544.0));
-        path.add(List.of(544.0, 544.0));
-        path.add(List.of(634.0, 544.0));
-        path.add(List.of(634.0, 634.0));  
-        path.add(List.of(634.0, 724.0));   
-        path.add(List.of(544.0, 724.0));  
-        path.add(List.of(454.0, 724.0));  
-        path.add(List.of(364.0, 724.0));  
-        path.add(List.of(274.0, 724.0));  
-        path.add(List.of(184.0, 724.0));   
-        path.add(List.of(94.0, 724.0));   
-        path.add(List.of(-16.0, 742.0));
+        path.add(List.of(-14.0, 235.0));  // point 1
+        path.add(List.of(94.0, 225.0));   // point 2
+        path.add(List.of(184.0, 225.0));  // point 3
+        path.add(List.of(274.0, 225.0));
+        path.add(List.of(364.0, 225.0));
+        path.add(List.of(454.0, 225.0));
+        path.add(List.of(544.0, 225.0));
+        path.add(List.of(634.0, 225.0));
+        path.add(List.of(634.0, 320.0));
+        path.add(List.of(634.0, 415.0));
+        path.add(List.of(544.0, 415.0));
+        path.add(List.of(454.0, 415.0));
+        path.add(List.of(364.0, 415.0));
+        path.add(List.of(274.0, 415.0));
+        path.add(List.of(184.0, 415.0));
+        path.add(List.of(94.0, 415.0));
+        path.add(List.of(4.0, 415.0));
+        path.add(List.of(4.0, 505.0));
+        path.add(List.of(4.0, 595.0));
+        path.add(List.of(94.0, 595.0));
+        path.add(List.of(184.0, 595.0));
+        path.add(List.of(274.0, 595.0));
+        path.add(List.of(364.0, 595.0));
+        path.add(List.of(454.0, 595.0));
+        path.add(List.of(544.0, 595.0));
+        path.add(List.of(634.0, 595.0));
+        path.add(List.of(634.0, 685.0));
+        path.add(List.of(634.0, 775.0));
+        path.add(List.of(544.0, 775.0));
+        path.add(List.of(454.0, 775.0));
+        path.add(List.of(364.0, 775.0));
+        path.add(List.of(274.0, 775.0));
+        path.add(List.of(184.0, 775.0));
+        path.add(List.of(94.0, 775.0));
+        path.add(List.of(-14.0, 761.0));
         return path;
     }
 
+
+
     private List<List<Double>> createPath4() {
         List<List<Double>> path = new ArrayList<>();
-        path.add(List.of(-26.0, 150.0));
-        path.add(List.of(68.0, 150.0));
-        path.add(List.of(158.0, 150.0));
-        path.add(List.of(248.0, 150.0));
-        path.add(List.of(338.0, 150.0));
-        path.add(List.of(428.0, 150.0));
-        path.add(List.of(518.0, 150.0));
-        path.add(List.of(608.0, 150.0));
-        path.add(List.of(608.0, 245.0));
-        path.add(List.of(608.0, 340.0));
-        path.add(List.of(518.0, 340.0));
-        path.add(List.of(428.0, 340.0));
-        path.add(List.of(338.0, 340.0));
-        path.add(List.of(248.0, 340.0));
-        path.add(List.of(158.0, 340.0));
-        path.add(List.of(68.0, 340.0));
-        path.add(List.of(-22.0, 340.0));
-        path.add(List.of(-22.0, 430.0));
-        path.add(List.of(-22.0, 520.0));
-        path.add(List.of(68.0, 520.0));
-        path.add(List.of(158.0, 520.0));
-        path.add(List.of(248.0, 520.0));
-        path.add(List.of(338.0, 520.0));
-        path.add(List.of(428.0, 520.0));
-        path.add(List.of(518.0, 520.0));
-        path.add(List.of(608.0, 520.0));
-        path.add(List.of(608.0, 610.0));
-        path.add(List.of(608.0, 700.0));
-        path.add(List.of(518.0, 700.0));
-        path.add(List.of(428.0, 700.0));
-        path.add(List.of(338.0, 700.0));
-        path.add(List.of(248.0, 700.0));
-        path.add(List.of(158.0, 700.0));
-        path.add(List.of(58.0, 700.0));
-        path.add(List.of(-30.0, 700.0));
+        path.add(List.of(20.0, 199.0));   // point 1
+        path.add(List.of(119.0, 199.0));  // point 2
+        path.add(List.of(209.0, 199.0));  // point 3
+        path.add(List.of(299.0, 199.0));
+        path.add(List.of(389.0, 199.0));
+        path.add(List.of(479.0, 199.0));
+        path.add(List.of(569.0, 199.0));
+        path.add(List.of(659.0, 199.0));
+        path.add(List.of(659.0, 294.0));
+        path.add(List.of(659.0, 389.0));
+        path.add(List.of(569.0, 389.0));
+        path.add(List.of(479.0, 389.0));
+        path.add(List.of(389.0, 389.0));
+        path.add(List.of(299.0, 389.0));
+        path.add(List.of(209.0, 389.0));
+        path.add(List.of(119.0, 389.0));
+        path.add(List.of(29.0, 389.0));
+        path.add(List.of(29.0, 479.0));
+        path.add(List.of(29.0, 569.0));
+        path.add(List.of(119.0, 569.0));
+        path.add(List.of(209.0, 569.0));
+        path.add(List.of(299.0, 569.0));
+        path.add(List.of(389.0, 569.0));
+        path.add(List.of(479.0, 569.0));
+        path.add(List.of(569.0, 569.0));
+        path.add(List.of(659.0, 569.0));
+        path.add(List.of(659.0, 659.0));
+        path.add(List.of(659.0, 749.0));
+        path.add(List.of(569.0, 749.0));
+        path.add(List.of(479.0, 749.0));
+        path.add(List.of(389.0, 749.0));
+        path.add(List.of(299.0, 749.0));
+        path.add(List.of(209.0, 749.0));
+        path.add(List.of(119.0, 749.0));
+        path.add(List.of(20.0, 735.0));
         return path;
     }
+
     // Positionner les pions
-    private void positionPion(Circle pion, List<Double> position) {
+    private void positionPion(Pane pion, List<Double> position) {
         pion.setLayoutX(position.get(0));
         pion.setLayoutY(position.get(1));
     }
@@ -320,30 +412,25 @@ public class BoardController {
     // Méthode pour déplacer un pion d'une case à la suivante
     public void movePions(int pionIndex, int steps) {
         // Enlève l'effet lumineux sur tous les pions
-        removeGlowEffect(pion1b);
-        removeGlowEffect(pion2b);
-        removeGlowEffect(pion3b);
-        removeGlowEffect(pion4b);
 
         PlayerConfig player = players.get(pionIndex);
         // Avance d'une case
         int pos = player.getPosition() + steps;
-        Circle pion = getPionCircle(pionIndex);
+        Pane pion = getPionCircle(pionIndex);
         
         List<List<Double>> path = getPathForPion(pionIndex);
-        if (pos < path.size() && pos > 0) {
+        if (pos < path.size() && pos >= 0) {
             player.move(steps);
             positionPion(pion, path.get(player.getPosition()));
+        } else if(pos < 0) {
+        	player.setPosition(0);
+        	positionPion(pion, path.get(player.getPosition()));
         } else if(pos >= path.size()) {
         	player.setPosition(game.MAX_POSITION-1);
-        	positionPion(pion, path.get(player.getPosition()));
-        } else if(pos <= 0) {
-        	player.setPosition(0);
         	positionPion(pion, path.get(player.getPosition()));
         }
         
         // Remet l'effet lumineux sur le bon bouton
-        highlightPion(getPionHighlight(pionIndex));
 
         // Met à jour le texte de progression
         updateProgressionText(pionIndex, pos);
@@ -361,18 +448,18 @@ public class BoardController {
     }
 
     // Petite méthode utilitaire pour récupérer l'ImageView du pion
-    private Circle getPionCircle(int pionIndex) {
+    private Pane getPionCircle(int pionIndex) {
         switch (pionIndex) {
-            case 0: return pion1;
-            case 1: return pion2;
-            case 2: return pion3;
-            case 3: return pion4;
+            case 0: return pionContainer1;
+            case 1: return pionContainer2;
+            case 2: return pionContainer3;
+            case 3: return pionContainer4;
             default: throw new IllegalArgumentException("Invalid pion index");
         }
     }
 
     // Petite méthode utilitaire pour récupérer le bouton du pion
-    private Circle getPionHighlight(int pionIndex) {
+    private Pane getPionHighlight(int pionIndex) {
         switch (pionIndex) {
             case 0: return pion1b;
             case 1: return pion2b;
@@ -412,6 +499,7 @@ public class BoardController {
                     TirageCarte controller = loader.getController();
 
                     Stage stage = new Stage();
+                    stage.initStyle(StageStyle.UNDECORATED);
                     stage.setTitle("Carte - Thème : " + theme);
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
@@ -426,7 +514,7 @@ public class BoardController {
                         Platform.runLater(() -> {
                             Question q = controller.getCurrentQuestion();
                             if (q != null) {
-                            	if(controller.getCorrectAnswer())
+                            	if(controller.isCorrectAnswer())
                             		movePions(playerIndex, q.getPriority());
                             	else {
                             		movePions(playerIndex, - q.getPriority());
@@ -444,9 +532,10 @@ public class BoardController {
                     e.printStackTrace();
                 }
 
-            } else {
-                GameMenu gameMenu = new GameMenu();
-                gameMenu.start(new Stage());
+            }
+            if(game.isFinished()) {
+            	GameMenu gameMenu = new GameMenu();
+            	gameMenu.start(new Stage());
             }
         }
     }

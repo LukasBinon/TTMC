@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import factories.*;
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -17,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import models.Card;
 import models.Question;
 
@@ -152,16 +154,21 @@ public class TirageCarte {
 
             if (selectedChoice != null && selectedChoice.equals(currentQuestion.getAnswer())) {
                 correctAnswer = true;
-                answerLabel.setText("✔️ Bonne réponse !");
+                answerLabel.setText("✔️ Nice !");
             } else {
                 correctAnswer = false;
-                answerLabel.setText("❌ Mauvaise réponse. La bonne réponse était : " + currentQuestion.getAnswer());
+                answerLabel.setText("❌ Wrong !");
             }
 
             answerLabel.setVisible(true);
             validerButton.setDisable(true);
             drawButton.setDisable(true);
-            setUsed(false);
+            PauseTransition pause = new PauseTransition(Duration.seconds(2));
+            pause.setOnFinished(event -> {
+                Stage stage = (Stage) validerButton.getScene().getWindow();
+                stage.close();
+            });
+            pause.play();
         }
     }
 
@@ -182,7 +189,7 @@ public class TirageCarte {
     	return currentQuestion;
     }
     
-    public boolean getCorrectAnswer() {
+    public boolean isCorrectAnswer() {
     	return correctAnswer;
     }
 }

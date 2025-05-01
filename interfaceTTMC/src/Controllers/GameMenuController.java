@@ -123,7 +123,6 @@ public class GameMenuController {
     		button.setText("Normal");
     		Game.setDifficulty(EDifficulty.NORMAL);
     	}
-    	
     }
 
 

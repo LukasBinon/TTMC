@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.effect.Glow;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.Pane;
@@ -29,6 +30,7 @@ import java.util.Map;
 import java.util.Random;
 
 import Views.GameMenu;
+import Views.RankingMenu;
 
 public class BoardController {
 
@@ -39,6 +41,7 @@ public class BoardController {
     private Game game;
     private int currentPlayer;
     
+    @FXML private Button moveButton;
     @FXML private Rectangle tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9, tile10;
     @FXML private Rectangle tile11, tile12, tile13, tile14, tile15, tile16, tile17, tile18, tile19, tile20;
     @FXML private Rectangle tile21, tile22, tile23, tile24, tile25, tile26, tile27, tile28, tile29, tile30;
@@ -52,6 +55,7 @@ public class BoardController {
         this.players = players;
         this.game = new Game(players);
         this.currentPlayer = 0;
+        moveButton.setText("Play : " + players.get(0).getPlayerName());
     }
     
     // Vecteurs des positions pour chaque pion
@@ -500,6 +504,11 @@ public class BoardController {
 
                     Stage stage = new Stage();
                     stage.initStyle(StageStyle.UNDECORATED);
+                    
+                    Stage mainStage = (Stage) pionContainer1.getScene().getWindow();
+                    stage.initOwner(mainStage);
+                    stage.setAlwaysOnTop(true); // (facultatif) pour rester devant
+                    
                     stage.setTitle("Carte - Thème : " + theme);
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
@@ -508,6 +517,7 @@ public class BoardController {
                     controller.applyTheme(theme);
                     stage.setResizable(false);
                     stage.show();
+                    stage.toFront();
 
                     // Quand la fenêtre se ferme, on agit
                     stage.setOnHidden(e -> {
@@ -522,9 +532,20 @@ public class BoardController {
                             }
 
                             updateProgressionText(playerIndex, players.get(playerIndex).getPosition());
-                            currentPlayer = (currentPlayer + 1) % players.size();
+                            do {
+                            	currentPlayer = (currentPlayer + 1) % players.size();
+                            }while(players.get(currentPlayer).isFinished());
+                            
                             game.verifyEndGame();
                             TirageCarte.setUsed(false);
+                            moveButton.setText("Play : " + players.get(currentPlayer).getPlayerName());
+                            if (game.isFinished()) {
+                                ((Stage) pionContainer1.getScene().getWindow()).close();
+                                RankingMenu rankingMenu = new RankingMenu();
+                                rankingMenu.setPlayers(players);
+                                rankingMenu.start(new Stage());
+                            }
+
                         });
                     });
 
@@ -533,15 +554,6 @@ public class BoardController {
                 }
 
             }
-            if(game.isFinished()) {
-            	GameMenu gameMenu = new GameMenu();
-            	gameMenu.start(new Stage());
-            }
         }
     }
-
-
-
-
 }
-

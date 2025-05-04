@@ -13,6 +13,7 @@ public class PlayerConfig {
         private int position;
         private boolean finished;
         private MovementStrategy movementStrategy;
+        private int rank;
         
         public PlayerConfig(String name, int shape, int color, EDifficulty difficulty) {
             this.playerName = name;
@@ -24,6 +25,7 @@ public class PlayerConfig {
 	            case NORMAL -> new NormalMovement();
 	            case HARD -> new HardMovement();
             };
+            this.rank = 4;
         }
         
         public void move(int steps) {
@@ -69,6 +71,15 @@ public class PlayerConfig {
 	    
 	    public void setFinished() {
 	    	this.finished = true;
+	    }
+	    
+	    public int getRank() {
+	    	return rank;
+	    }
+	    
+	    public void setRank(int rank) {
+	    	if(rank > 0 && rank < 5)
+	    		this.rank = rank;
 	    }
 
 }

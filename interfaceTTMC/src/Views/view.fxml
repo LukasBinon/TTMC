@@ -92,10 +92,10 @@
 						<Pane fx:id="pionContainer3" layoutX="-14.0" layoutY="235.0" prefHeight="60" prefWidth="60" />
 						<Pane fx:id="pionContainer4" layoutX="20.0" layoutY="199.0" prefHeight="60" prefWidth="60" />
 
-                    <Button fx:id="moveButton" layoutX="960.0" layoutY="459.0" onAction="#movePion" text="Play" />
-
                     </children>
                 </Pane>
+
+              <Button fx:id="moveButton" layoutX="122.0" layoutY="328.0" onAction="#movePion" text="Play" />
                   <!-- Grid Rectangles -->
                   
                   

@@ -35,6 +35,7 @@ public class GameMenu {
         HBox musicControlBox = createMusicControlBox();
 
         BorderPane root = new BorderPane();
+        
         root.setTop(titleContainer);
         root.setCenter(menuBox);
         BorderPane.setAlignment(musicControlBox, Pos.BOTTOM_RIGHT);

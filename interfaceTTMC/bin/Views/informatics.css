@@ -1,85 +1,69 @@
-/* Retro Arcade Neon Theme - Adapted with Blue */
-.rootPane {
-    -fx-background-color: linear-gradient(to bottom, #000000, #1a1a1a, #000033);
-    -fx-font-family: 'Press Start 2P', cursive;
-    -fx-text-fill: rgb(0, 0, 205);
+#rootPane {
+    -fx-background-color: linear-gradient(to right, rgb(0, 102, 204), rgb(51, 153, 255)); 
     -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-border-color: #003366; 
+    -fx-border-width: 4px;
+    -fx-effect: dropshadow(gaussian, #3399FF, 15, 0.5, 0, 0); 
+    -fx-font-family: 'PressStart2P', monospace;
 }
 
-/* Center the Title */
 #cardTitle {
-    -fx-font-size: 24px; /* Slightly larger for emphasis */
-    -fx-text-fill: rgb(0, 0, 205); /* Neon blue */
-    -fx-alignment: center; /* Center the title */
-    -fx-effect: dropshadow(gaussian, rgb(0, 0, 205), 10, 0.5, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: #00BFFF; 
     -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, #003366, 10, 0.3, 0, 0); 
 }
 
-/* ComboBox */
-.combo-box {
-    -fx-background-color: #1a1a1a;
-    -fx-text-fill: rgb(0, 0, 205);
-    -fx-border-color: rgb(0, 0, 205);
-    -fx-border-width: 2px;
-    -fx-font-size: 14px;
-    -fx-effect: dropshadow(gaussian, rgb(0, 0, 205), 10, 0.5, 0, 0);
+#difficultySelector {
+    -fx-background-color: #001F3F; 
+    -fx-text-fill: #66CCFF; 
+    -fx-border-color: #0059b3; 
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: innershadow(gaussian, #66CCFF, 3, 0.4, 0, 0); 
 }
 
-/* Button */
-.button {
-    -fx-background-color: rgb(0, 0, 205);
-    -fx-text-fill: #ffffff;
-    -fx-font-size: 14px;
-    -fx-border-radius: 8px;
-    -fx-background-radius: 8px;
-    -fx-effect: dropshadow(gaussian, rgb(0, 0, 205), 15, 0.7, 0, 0);
+#drawButton, #validerButton {
+    -fx-background-color: linear-gradient(to bottom, #00BFFF, #1E90FF); 
+    -fx-text-fill: white;
     -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 18px;
+    -fx-effect: dropshadow(gaussian, #00BFFF, 8, 0.6, 0, 0);
+    -fx-font-family: 'PressStart2P', monospace;
 }
 
-.button:hover {
-    -fx-background-color: #0055ff;
-    -fx-text-fill: #ffffff;
-    -fx-effect: dropshadow(gaussian, #0033cc, 20, 0.7, 0, 0);
+#drawButton:hover, #validerButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #66CCFF, #00BFFF);
+    -fx-effect: dropshadow(gaussian, #66CCFF, 12, 0.7, 0, 0);
 }
 
-/* Label */
-.label {
+#questionLabel {
+    -fx-text-fill: #66CCFF; 
     -fx-font-size: 14px;
-    -fx-text-fill: rgb(0, 0, 205);
-    -fx-effect: dropshadow(gaussian, rgb(0, 0, 205), 10, 0.3, 0, 0);
+    -fx-padding: 10;
+    -fx-background-color: #001933; 
+    -fx-border-color: #0059b3; 
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-effect: innershadow(gaussian, #3399FF, 3, 0.4, 0, 0);
 }
 
-/* ListView */
-.list-view {
-    -fx-background-color: #1a1a1a;
-    -fx-text-fill: rgb(0, 0, 205);
-    -fx-font-size: 12px;
-    -fx-border-color: rgb(0, 0, 205);
-    -fx-border-width: 2px;
-    -fx-effect: dropshadow(gaussian, rgb(0, 0, 205), 10, 0.5, 0, 0);
+#choicesList {
+    -fx-background-color: #001933; 
+    -fx-control-inner-background: #001933;
+    -fx-border-color: #0059b3;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: #66CCFF;
+    -fx-effect: innershadow(gaussian, #3399FF, 2, 0.3, 0, 0);
 }
 
-.list-view .cell {
-    -fx-background-color: #2e2e2e;
-    -fx-text-fill: rgb(0, 0, 205);
-}
-
-.list-view .cell:hover {
-    -fx-background-color: #3e3e3e;
-    -fx-text-fill: #0055ff;
-}
-
-.list-view .cell:selected {
-    -fx-background-color: rgb(0, 0, 205); /* Neon blue background on selection */
-    -fx-text-fill: #ffffff; /* White text for better contrast */
-}
-
-/* Background of the Card */
-.card {
-    -fx-background-color: #333333; /* Dark gray background for the card */
-    -fx-border-color: rgb(0, 0, 205); /* Neon blue border for the card */
-    -fx-border-width: 2px;
-    -fx-background-radius: 10px; /* Rounded corners for the card */
-    -fx-padding: 20px;
-    -fx-effect: dropshadow(gaussian, rgb(0, 0, 205), 10, 0.5, 0, 0);
+#answerLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #66CCFF;
 }

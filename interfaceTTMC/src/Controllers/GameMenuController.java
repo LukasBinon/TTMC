@@ -41,7 +41,7 @@ public class GameMenuController {
             {
             	 Alert alert = new Alert(AlertType.INFORMATION);
             	    alert.setTitle("Information");
-            	    alert.setHeaderText(null); // Pas de titre secondaire
+            	    alert.setHeaderText(null); //no secondary title
             	    alert.setContentText("Please enter the number of players.");
             	    alert.initOwner(view.getMainLayout().getScene().getWindow());
             	    alert.showAndWait();

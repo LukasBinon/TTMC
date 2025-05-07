@@ -9,10 +9,10 @@
       spacing="10"
       prefWidth="400"
       prefHeight="600"
-      style="-fx-padding: 20; -fx-font-size: 14px; -fx-background-color: #2E2E2E;">
+     >
 
     
-    <Label fx:id="cardTitle" text="Education" style="-fx-font-size: 20px; -fx-text-fill: #FFD700;"/>
+    <Label fx:id="cardTitle" text="Education" style="-fx-font-size: 20px; "/>
 
     <ComboBox fx:id="difficultySelector" />
 

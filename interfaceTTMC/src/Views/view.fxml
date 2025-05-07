@@ -99,7 +99,7 @@
 						<Pane fx:id="pionContainer3" layoutX="-14.0" layoutY="235.0" prefWidth="60" prefHeight="60"/>
 						<Pane fx:id="pionContainer4" layoutX="20.0" layoutY="199.0" prefWidth="60" prefHeight="60"/>
 
-                    <Button fx:id="moveButton" layoutX="681.0" layoutY="100.0" onAction="#movePion" text="Play" />
+                    <Button fx:id="moveButton" layoutX="960.0" layoutY="459.0" onAction="#movePion" text="Play" />
 
                     </children>
                 </Pane>

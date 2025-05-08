@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 
 
 public class MenuController {
-
     private Stage menuStage;
 
     public MenuController(Stage menuStage) {
@@ -27,7 +26,6 @@ public class MenuController {
 	    
 	    
 	  
-	    
 	    // Crée une nouvelle instance de GameMenu
 	    GameMenu gmenu = new GameMenu();
 	    

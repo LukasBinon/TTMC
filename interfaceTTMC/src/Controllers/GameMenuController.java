@@ -15,6 +15,7 @@ import java.net.URL;
 import Views.ChoicePiece;
 import Views.ConfirmationWindow;
 import Views.GameMenu;
+import Views.RulesMenu;
 
 public class GameMenuController {
 
@@ -136,7 +137,13 @@ public class GameMenuController {
 }
 
     private void showRules() {
-        System.out.println("Displaying game rules...");
-        // TODO: Implement rules display logic
+        RulesMenu rulesMenu = new RulesMenu();
+        Scene rulesScene = new Scene(rulesMenu.getMainLayout());
+
+        
+        new RulesMenuController(rulesMenu, stage, view.getMainLayout().getScene());
+
+        stage.setScene(rulesScene);
+        stage.setFullScreen(true);
     }
 }

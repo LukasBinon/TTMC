@@ -2,6 +2,7 @@ package Views;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -35,7 +36,6 @@ public class GameMenu {
         HBox musicControlBox = createMusicControlBox();
 
         BorderPane root = new BorderPane();
-        
         root.setTop(titleContainer);
         root.setCenter(menuBox);
         BorderPane.setAlignment(musicControlBox, Pos.BOTTOM_RIGHT);
@@ -61,9 +61,9 @@ public class GameMenu {
     public Button getRulesButton() {
         return rulesButton;
     }
-    
+
     public Button getDifficultyButton() {
-    	return difficultyButton;
+        return difficultyButton;
     }
 
     public Button getQuitButton() {
@@ -77,12 +77,10 @@ public class GameMenu {
     private Image loadBackgroundImage() {
         return new Image(getClass().getResourceAsStream(BACKGROUND_IMAGE_PATH));
     }
-    
+
     public void close() {
         mainLayout.getScene().getWindow().hide();
     }
-    
- 
 
     private StackPane createBackgroundStack(Image backgroundImage) {
         BackgroundImage bgImage = new BackgroundImage(
@@ -177,6 +175,15 @@ public class GameMenu {
 
         return button;
     }
+    
+    public void start(Stage stage) {
+        stage.setFullScreen(true);
+        Scene scene = new Scene(mainLayout, 1100, 800);
+       
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
     private HBox createMusicControlBox() {
         musicToggleButton = new Button("Music: ON");
@@ -191,13 +198,4 @@ public class GameMenu {
 
         return new HBox(musicToggleButton);
     }
-    
-   
-
-    public void start(Stage stage) {
-        stage.setFullScreen(true); 
-        stage.setScene(mainLayout.getScene()); 
-        stage.show(); 
-    }
-
 }

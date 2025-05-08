@@ -1,6 +1,8 @@
 package Views;
 
+import Controllers.GameMenuController;
 import Controllers.MenuController;
+import Exceptions.AudioFileNotFoundException;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -19,6 +21,7 @@ public class Menu {
     private Button btnResume;
     private Button btnMainMenu;
     private Button btnQuit;
+    private Button musicToggleButton;
 
     private Stage menuStage;
     private static final String FONT_PATH = "/fonts/PressStart2P-Regular.ttf";
@@ -37,7 +40,7 @@ public class Menu {
         root = new VBox(20);
         root.setPadding(new Insets(30, 20, 30, 20));
         root.setAlignment(Pos.TOP_CENTER);
-        root.getStyleClass().add("root"); // Ajoute la classe 'root' pour appliquer le CSS
+        root.getStyleClass().add("root");
 
         // Titre
         titleLabel = new Text("How much do you spend");
@@ -52,25 +55,50 @@ public class Menu {
         btnMainMenu = createButton("Back to Main Menu", arcadeFontButtons);
         btnQuit = createButton("Quit Game", arcadeFontButtons);
 
+        // Bouton musique
+        musicToggleButton = createButton("Music: ON", arcadeFontButtons);
+
+        GameMenuController controllerInstance = GameMenuController.getInstance();
+        if (controllerInstance != null) {
+            updateMusicButtonText(controllerInstance);
+        }
+
+        musicToggleButton.setOnAction(e -> {
+            GameMenuController musicController = GameMenuController.getInstance();
+            if (musicController != null) {
+                try {
+					musicController.toggleMusic();
+				} catch (AudioFileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+                updateMusicButtonText(musicController);
+            }
+        });
+
         // Actions
         btnResume.setOnAction(e -> controller.onResume());
-        btnMainMenu.setOnAction(e -> controller.onMainMenu(menuStage));
-        btnQuit.setOnAction(e -> controller.onQuit());
+        btnMainMenu.setOnAction(e -> controller.onMainMenu(ownerStage));
+        btnQuit.setOnAction(e -> controller.onQuit(ownerStage));
 
-        root.getChildren().addAll(titleLabel, btnResume, btnMainMenu, btnQuit);
+        root.getChildren().addAll(titleLabel, btnResume, btnMainMenu, btnQuit, musicToggleButton);
 
         // Scène
         Scene scene = new Scene(root, 700, 400);
-        scene.getStylesheets().add(getClass().getResource("/Views/menu.css").toExternalForm()); // Lien avec le CSS
+        scene.getStylesheets().add(getClass().getResource("/Views/menu.css").toExternalForm());
         menuStage.setScene(scene);
     }
 
-    
     private Button createButton(String text, Font font) {
         Button button = new Button(text);
         button.setFont(font);
         button.getStyleClass().add("arcade-button");
         return button;
+    }
+
+    private void updateMusicButtonText(GameMenuController controller) {
+        boolean isPlaying = controller.isMusicPlaying();
+        musicToggleButton.setText(isPlaying ? "Music: ON" : "Music: OFF");
     }
 
     public void showMenu() {

@@ -34,9 +34,14 @@ public class Board extends Pane {
         background.fitHeightProperty().bind(primaryStage.heightProperty());
 
         // Overlay sombre
+     // Dark overlay that covers the entire screen
         Pane darkOverlay = new Pane();
         darkOverlay.setStyle("-fx-background-color: rgba(0, 0, 0, 0.5);");
-        darkOverlay.setPrefSize(1100, 800);
+
+        // Bind overlay size to the window dimensions
+        darkOverlay.prefWidthProperty().bind(primaryStage.widthProperty());
+        darkOverlay.prefHeightProperty().bind(primaryStage.heightProperty());
+
 
         // Conteneur principal
         StackPane backgroundStack = new StackPane();

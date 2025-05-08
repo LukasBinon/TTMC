@@ -42,7 +42,7 @@
         
 
         <!-- Dark Overlay -->
-        <Pane layoutY="-43.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);">
+        <Pane layoutY="-43.0">
             <children>
             
 
@@ -95,7 +95,7 @@
                     </children>
                 </Pane>
 
-              <Button fx:id="moveButton" layoutX="122.0" layoutY="328.0" onAction="#movePion" text="Play" />
+              <Button fx:id="moveButton" layoutX="78.0" layoutY="328.0" onAction="#movePion" text="Play" />
                   <!-- Grid Rectangles -->
                   
                   

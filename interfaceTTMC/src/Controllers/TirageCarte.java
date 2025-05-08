@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import Exceptions.CardNotFoundException;
 import factories.*;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
@@ -115,6 +116,10 @@ public class TirageCarte {
             FXMLLoader loader = new FXMLLoader(TirageCarte.class.getResource("/views/card.fxml"));
             Parent root = loader.load();
 
+            if (root == null) {
+                throw new CardNotFoundException(); // Lancer l'exception si la carte (fichier) n'est pas trouvée
+            }
+
             stage = new Stage();
             stage.setTitle("Carte - Thème : " + selectedTheme);
             Scene scene = new Scene(root);
@@ -127,25 +132,41 @@ public class TirageCarte {
 
             setUsed(true);
             stage.show();
+        } catch (CardNotFoundException e) {
+            System.out.println(e.getMessage()); 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); 
         }
     }
 
 
     @FXML
     private void handleDrawButton() {
-        String selectedPriority = difficultySelector.getValue();
-        currentQuestion = card.getQuestions().get(Integer.parseInt(selectedPriority) - 1);
+        try {
+            String selectedPriority = difficultySelector.getValue();
+            int index = Integer.parseInt(selectedPriority) - 1;
 
-        questionLabel.setText("❓ " + currentQuestion.getQuestion());
-        choicesList.getItems().setAll(currentQuestion.getMultipleChoice());
-        answerLabel.setText("✔️ Réponse : ???");
-        answerLabel.setVisible(false);
-        validerButton.setDisable(false);
-        difficultySelector.setDisable(true);
-        drawButton.setDisable(true);
+            // Vérifier si l'index est valide
+            if (index < 0 || index >= card.getQuestions().size()) {
+                throw new CardNotFoundException(); // Lever l'exception si l'index est hors limites
+            }
+
+            currentQuestion = card.getQuestions().get(index);
+
+            questionLabel.setText("❓ " + currentQuestion.getQuestion());
+            choicesList.getItems().setAll(currentQuestion.getMultipleChoice());
+            answerLabel.setText("✔️ Réponse : ???");
+            answerLabel.setVisible(false);
+            validerButton.setDisable(false);
+            difficultySelector.setDisable(true);
+            drawButton.setDisable(true);
+        } catch (CardNotFoundException e) {
+            System.out.println(e.getMessage()); // Affiche "Card not found in the JSON data"
+        } catch (NumberFormatException e) {
+            System.out.println("Erreur : priorité invalide !");
+        }
     }
+
 
     @FXML
     private void handleValidateButton() {

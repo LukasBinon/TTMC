@@ -12,6 +12,7 @@ import models.Game;
 
 import java.net.URL;
 
+import Exceptions.AudioFileNotFoundException;
 import Views.ChoicePiece;
 import Views.ConfirmationWindow;
 import Views.GameMenu;
@@ -53,18 +54,32 @@ public class GameMenuController {
         view.getMusicToggleButton().setOnAction(e -> toggleMusic());
     }
 
-    public void playBackgroundMusic() {
+    public void playBackgroundMusic() throws AudioFileNotFoundException {
+        // Get the audio file URL from resources
         URL audioUrl = getClass().getResource(AUDIO_PATH);
+
+        // Check if the audio file was found
         if (audioUrl != null) {
+            // Create a Media object from the audio file URL
             Media media = new Media(audioUrl.toString());
+
+            // Create a MediaPlayer to play the media
             mediaPlayer = new MediaPlayer(media);
+
+            // Set the media player to loop indefinitely
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+
+            // Set the volume level (5% of the maximum volume)
             mediaPlayer.setVolume(0.05);
+
+            // Start playing the background music
             mediaPlayer.play();
         } else {
-            System.err.println("Error: Audio file not found. Check the file path.");
+            // Throw custom exception if the audio file is missing
+            throw new AudioFileNotFoundException();
         }
     }
+
 
     private void toggleMusic() {
         if (mediaPlayer == null) return;

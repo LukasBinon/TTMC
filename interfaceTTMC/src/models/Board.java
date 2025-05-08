@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 import Controllers.BoardController;
+import Exceptions.FXMLLoadingException;
 
 public class Board extends Pane {
     
@@ -79,22 +80,29 @@ public class Board extends Pane {
 
     private void loadRectanglesFromFXML() {
         try {
-            // Charger le fichier FXML
+            // Load the FXML file
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/view.fxml"));
-            AnchorPane root = loader.load(); // Charge le FXML et retourne le root
+            AnchorPane root = loader.load(); // Load the FXML and return the root node
 
-            // Accéder au contrôleur de ce fichier FXML
+            // Check if the file was loaded correctly
+            if (root == null) {
+                throw new FXMLLoadingException(); // Throw custom exception if the file is not found
+            }
+
+            // Access the controller of the FXML file
             BoardController boardController = loader.getController();
 
-            // Initialiser les joueurs 
+            // Initialize players
             boardController.setPlayers(playerConfigs);
             boardController.initializePion();
 
-            // Ajouter le root à la scène
-            getChildren().add(root); 
+            // Add the root node to the scene
+            getChildren().add(root);
 
+        } catch (FXMLLoadingException e) {
+            System.err.println(e.getMessage()); // Prints "Error loading the FXML file."
         } catch (IOException e) {
-            System.err.println("Erreur lors du chargement du fichier FXML !");
+            System.err.println("Unexpected IO error while loading the FXML file.");
             e.printStackTrace();
         }
     }

@@ -1,6 +1,7 @@
 package Main;
 
 import Controllers.GameMenuController;
+import Exceptions.AudioFileNotFoundException;
 import Views.GameMenu;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -19,7 +20,12 @@ public class Play extends Application {
         primaryStage.setFullScreen(true);
         primaryStage.show();
 
-        controller.playBackgroundMusic();
+        try {
+			controller.playBackgroundMusic();
+		} catch (AudioFileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     public static void main(String[] args) {

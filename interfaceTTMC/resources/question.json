@@ -131,7 +131,7 @@
     },
     {
       "theme_name": "Entertainment",
-      "priority": 2,
+      "priority": 3,
       "question": "Which FPS, developed by Valve, is famous for its competitive multiplayer mode and iconic maps like 'Dust II' and 'Inferno'?",
       "answer": "Counter-Strike: Global Offensive",
       "multiple_choice": [
@@ -170,7 +170,7 @@
     },
     {
       "theme_name": "Entertainment",
-      "priority": 1,
+      "priority": 3,
       "question": "Who is the creator of the 'The Legend of Zelda' series?",
       "answer": "Shigeru Miyamoto",
       "multiple_choice": [
@@ -365,7 +365,7 @@
       },
       {
         "theme_name": "Informatics",
-        "priority": 2,
+        "priority": 1,
         "question": "In an RPG, a spell system allows players to cast different types of magic (fire, ice, lightning, etc.). Each spell has its own effects, mana costs, and animations. Which design pattern would you use to structure this system flexibly, allowing new spells to be added easily without modifying existing code?",
         "answer": "Strategy Pattern",
         "multiple_choice": [
@@ -414,6 +414,227 @@
           "final",
           "private"
         ]
+      },
+      {
+        "theme_name": "Improbable",
+        "priority": 1,
+        "question": "Which popular video game features a fully playable retro game hidden on an in-game computer screen?",
+        "answer": "Call of Duty: Black Ops",
+        "multiple_choice": [
+          "The Witcher 3: Wild Hunt",
+          "Call of Duty: Black Ops",
+          "Minecraft",
+          "The Elder Scrolls V: Skyrim",
+          "Cyberpunk 2077"
+        ]
+      },			
+      {
+        "theme_name": "Improbable",
+        "priority": 1,
+        "question": "Which of the following animals was once accidentally added as a playable character in a fighting game due to a bug?",
+        "answer": "A chicken",
+        "multiple_choice": [
+          "A goldfish in a bowl",
+          "A kangaroo with boxing gloves",
+          "A chicken",
+          "A cat with a laser gun",
+          "A goat"
+        ]
+      },						
+      {
+        "theme_name": "Improbable",
+        "priority": 3,
+        "question": "Which of the following games was secretly controlled by an AI pretending to be a human player during public matches?",
+        "answer": "StarCraft II",
+        "multiple_choice": [
+          "Overwatch",
+          "StarCraft II",
+          "League of Legends",
+          "Dota 2",
+          "Fortnite"
+        ]
+      },									
+      {
+        "theme_name": "Improbable",
+        "priority": 4,
+        "question": "Which of the following games once had a hidden, undocumented boss that took over a decade to be discovered by players?",
+        "answer": "Final Fantasy IX",
+        "multiple_choice": [
+          "Bloodborne",
+          "Final Fantasy IX",
+          "Shadow of the Colossus",
+          "Nier: Automata",
+          "The Legend of Zelda: Twilight Princess"
+        ]
+      },												
+      {
+        "theme_name": "Entertainment",
+        "priority": 3,
+        "question": "Which video game franchise had a live-action TV adaptation released by HBO in 2023?",
+        "answer": "The Last of Us",
+        "multiple_choice": [
+          "The Witcher",
+          "Halo",
+          "The Last of Us",
+          "Fallout",
+          "Resident Evil"
+        ]
+      },															
+      {
+        "theme_name": "Entertainment",
+        "priority": 4,
+        "question": "Which of these actors provided the voice and likeness for the character Sam Porter Bridges in the game Death Stranding?",
+        "answer": "Norman Reedus",
+        "multiple_choice": [
+          "Mads Mikkelsen",
+          "Norman Reedus",
+          "Troy Baker",
+          "Keanu Reeves",
+          "David Hayter"
+        ]
+      },																		
+      {
+        "theme_name": "Entertainment",
+        "priority": 4,
+        "question": "Which famous composer, known for scoring Studio Ghibli films, also contributed music to the video game Ni no Kuni: Wrath of the White Witch?",
+        "answer": "Joe Hisaishi",
+        "multiple_choice": [
+          "Nobuo Uematsu",
+          "Joe Hisaishi",
+          "Yoko Shimomura",
+          "Koji Kondo",
+          "Jeremy Soule"
+        ]
+      },																					
+      {
+        "theme_name": "Entertainment",
+        "priority": 4,
+        "question": "In the Netflix series Arcane, based on League of Legends, what is the name of the character who eventually becomes the champion known as Jinx?",
+        "answer": "Powder",
+        "multiple_choice": [
+          "Vi",
+          "Caitlyn",
+          "Powder",
+          "Mel",
+          "Seraphine"
+        ]
+      },																								
+      {
+        "theme_name": "Education",
+        "priority": 3,
+        "question": "Which programming language is most commonly used to develop games in the Unity game engine?",
+        "answer": "C#",
+        "multiple_choice": [
+          "Java",
+          "Python",
+          "C++",
+          "C#",
+          "JavaScript"
+        ]
+      },																											
+      {
+        "theme_name": "Education",
+        "priority": 4,
+        "question": "In game development, what does the term ""delta time"" typically refer to?",
+        "answer": "",
+        "multiple_choice": [
+          "The time it takes to compile the game",
+          "The delay between player input and response",
+          "The time difference between two frames",
+          "The average frame rate of the game",
+          "The total duration of the game loop"
+        ]
+      },																														
+      {
+        "theme_name": "Education",
+        "priority": 4,
+        "question": "What is the primary purpose of using a quadtree structure in 2D game development?",
+        "answer": "To manage collision detection and spatial partitioning",
+        "multiple_choice": [
+          "To improve sound rendering",
+          "To detect and optimize network latency",
+          "To compress textures more efficiently",
+          "To manage collision detection and spatial partitioning",
+          "To animate characters based on AI behavior"
+        ]
+      },																																	
+      {
+        "theme_name": "Education",
+        "priority": 4,
+        "question": "In educational games, what is “intrinsic integration” of learning content?",
+        "answer": "When educational content is seamlessly embedded in core gameplay mechanics",
+        "multiple_choice": [
+          "When the educational content is optional and separate from gameplay",
+          "When the learning is only presented in cutscenes",
+          "When educational content is seamlessly embedded in core gameplay mechanics",
+          "When mini-games replace real learning tasks",
+          "When the player is quizzed between levels without context"
+        ]
+      },																																				
+      {
+        "theme_name": "Informatics",
+        "priority": 1,
+        "question": "What does FPS stand for in the context of gaming performance?",
+        "answer": "Frames Per Second",
+        "multiple_choice": [
+          "First Player Scenario",
+          "Frames Per Second",
+          "Functional Play System",
+          "Frame Processing Speed",
+          "Full Performance Score"
+        ]
+      },																																							
+      {
+        "theme_name": "Informatics",
+        "priority": 1,
+        "question": "What is the main function of a GPU in gaming computers?",
+        "answer": "To process graphics and render images",
+        "multiple_choice": [
+          "To store game files",
+          "To cool down the system",
+          "To process graphics and render images",
+          "To manage internet connections",
+          "To run background applications"
+        ]
+      },																																										
+      {
+        "theme_name": "Informatics",
+        "priority": 4,
+        "question": "What is a ""shader"" in the context of modern video games?",
+        "answer": "A program that calculates the effects of lighting and shadows in a game",
+        "multiple_choice": [
+          "A tool used to edit game textures",
+          "A program that calculates the effects of lighting and shadows in a game",
+          "A network protocol for multiplayer games",
+          "A technique used to optimize frame rates",
+          "A hardware component used to render graphics"
+        ]
+      },																																										
+      {
+        "theme_name": "Informatics",
+        "priority": 4,
+        "question": "What is the purpose of ray tracing technology in modern video games?",
+        "answer": "To improve graphics by simulating realistic light behavior",
+        "multiple_choice": [
+          "To generate random game levels",
+          "To improve graphics by simulating realistic light behavior",
+          "To optimize network performance",
+          "To reduce the file size of game textures",
+          "To enhance character animation"
+        ]
+      },																																										
+      {
+        "theme_name": "Informatics",
+        "priority": 4,
+        "question": "What is the primary function of the game engine ""Unity"" in the development of video games?",
+        "answer": "It handles the game's visual effects, lighting, and rendering",
+        "multiple_choice": [
+          "It provides a platform for social media integration in games",
+          "It handles the game's visual effects, lighting, and rendering",
+          "It helps developers organize the game's storyline and dialogue",
+          "It manages the hardware performance of gaming consoles",
+          "It is primarily used for game marketing and distribution"
+        ]
       }
-    ]
+]
   

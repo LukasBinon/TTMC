@@ -4,8 +4,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class Piece {
-	private Circle token; // Représente visuellement le pion
-    private int position; // Position actuelle du pion
+	private Circle token; 
+    private int position; 
 
     public Piece(Color color) {
         this.token = new Circle(15, color); 

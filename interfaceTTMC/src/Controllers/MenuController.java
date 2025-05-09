@@ -1,13 +1,9 @@
 package Controllers;
 
-
-
-
 import Views.ConfirmationWindow;
 import Views.GameMenu;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 
 public class MenuController {
     private Stage menuStage;
@@ -16,58 +12,55 @@ public class MenuController {
         this.menuStage = menuStage;
     }
 
-    
-
-	public void onResume() {
+    // Method to resume the game, closing the menu stage
+    public void onResume() {
         menuStage.close();
     }
 
-	public void onMainMenu(Stage stage) {
-	    
-	    menuStage.close();
+    // Method to return to the main menu
+    public void onMainMenu(Stage stage) {
+        menuStage.close();
 
-	    
-	    Stage currentStage = (Stage) stage.getScene().getWindow();
-	    currentStage.close();
+        // Close the current stage (previous window)
+        Stage currentStage = (Stage) stage.getScene().getWindow();
+        currentStage.close();
 
-	   
-	    GameMenu gmenu = new GameMenu();
-	    Stage newStage = new Stage();
-	    
-	    GameMenuController controller = new GameMenuController(gmenu, newStage);
-	    gmenu.start(newStage);
-	}
+        // Create a new GameMenu and start it
+        GameMenu gmenu = new GameMenu();
+        Stage newStage = new Stage();
 
+        // Initialize the GameMenuController and start the new menu stage
+        GameMenuController controller = new GameMenuController(gmenu, newStage);
+        gmenu.start(newStage);
+    }
 
+    // Method to handle quitting the game
+    public void onQuit(Stage mainStage) {
+        // Hide the main window instead of closing it immediately
+        mainStage.hide();
 
+        // Create a confirmation window
+        ConfirmationWindow confirmationWindow = new ConfirmationWindow();
 
-	public void onQuit(Stage mainStage) {
-	    // Masque la fenêtre principale au lieu de la fermer directement
-	    mainStage.hide();
+        // Create the scene and stage for the confirmation window
+        Scene confirmationScene = new Scene(confirmationWindow.getMainLayout(), 400, 200);
+        Stage confirmationStage = new Stage();
+        confirmationStage.setTitle("Are you sure?");
+        confirmationStage.setScene(confirmationScene);
+        confirmationStage.setFullScreen(true); // Optional: full screen mode
 
-	    // Crée la fenêtre de confirmation
-	    ConfirmationWindow confirmationWindow = new ConfirmationWindow();
+        confirmationStage.show();
 
-	    // Crée la scène et la stage pour la confirmation
-	    Scene confirmationScene = new Scene(confirmationWindow.getMainLayout(), 400, 200);
-	    Stage confirmationStage = new Stage();
-	    confirmationStage.setTitle("Are you sure?");
-	    confirmationStage.setScene(confirmationScene);
-	    confirmationStage.setFullScreen(true); // facultatif
+        // If the user clicks "Yes", close the application
+        confirmationWindow.getYesButton().setOnAction(e -> {
+            confirmationStage.close();
+            mainStage.close(); // Close the application cleanly
+        });
 
-	    confirmationStage.show();
-
-	    // Si l'utilisateur clique sur "Yes"
-	    confirmationWindow.getYesButton().setOnAction(e -> {
-	        confirmationStage.close();
-	        mainStage.close(); // ferme l'application proprement
-	    });
-
-	    // Si l'utilisateur clique sur "No"
-	    confirmationWindow.getNoButton().setOnAction(e -> {
-	        confirmationStage.close();
-	        mainStage.show(); // revient au menu
-	    });
-	}
-
+        // If the user clicks "No", return to the menu
+        confirmationWindow.getNoButton().setOnAction(e -> {
+            confirmationStage.close();
+            mainStage.show(); // Show the main menu again
+        });
+    }
 }

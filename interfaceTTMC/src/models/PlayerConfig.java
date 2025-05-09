@@ -1,6 +1,6 @@
 package models;
 
-import javafx.scene.shape.Circle;
+
 import strategy.HardMovement;
 import strategy.MovementStrategy;
 import strategy.NormalMovement;

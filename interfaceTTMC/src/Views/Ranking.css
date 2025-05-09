@@ -1,0 +1,60 @@
+
+
+.root {
+    -fx-background-image: url("/images/menuTTMC.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+#borderPane {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.label {
+    -fx-font-family: 'Press Start 2P';
+    -fx-text-fill: yellow;
+    -fx-effect: dropshadow(gaussian, red, 2, 1.0, 0, 0);
+    -fx-alignment: center;
+}
+
+#rankingTitle {
+    -fx-font-family: 'Press Start 2P';
+    -fx-text-fill: yellow;
+    -fx-font-size: 72px;
+    -fx-effect: dropshadow(gaussian, red, 2, 1.0, 0, 0);
+    -fx-alignment: center;
+    -fx-padding: 40 0 0 0; /* TOP RIGHT BOTTOM LEFT */
+}
+
+
+.label:top {
+    -fx-font-size: 72px;
+}
+
+
+#playerRankOneLabel, #playerRankTwoLabel, #playerRankThreeLabel, #playerRankFourLabel {
+    -fx-text-fill: white;
+    -fx-font-family: 'Press Start 2P';
+    -fx-effect: dropshadow(gaussian, yellow, 1, 1.0, 0, 0);
+}
+
+.hbox {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+
+#gameMenuButton {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 32px;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-padding: 10 20 10 20;
+    -fx-effect: dropshadow(gaussian, red, 10, 0.5, 0, 0);
+}
+
+#gameMenuButton:hover {
+    -fx-text-fill: red;
+    -fx-effect: dropshadow(gaussian, yellow, 15, 0.7, 0, 0);
+}

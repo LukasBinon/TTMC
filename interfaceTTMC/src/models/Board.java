@@ -20,21 +20,20 @@ import Exceptions.FXMLLoadingException;
 public class Board extends Pane {
     
     private Menu menu;
-    private List<PlayerConfig> playerConfigs; // Liste des joueurs
+    private List<PlayerConfig> playerConfigs; // List of players' configurations
   
 
     public Board(Stage primaryStage, List<PlayerConfig> playerConfigs) {
-        this.playerConfigs = playerConfigs; // Stocke la configuration des joueurs
+        this.playerConfigs = playerConfigs; // Store the player configurations
 
-        // Configuration de l'arrière-plan
+        // Set up the background image
         ImageView background = new ImageView(new Image("images/board.png"));
         background.setPreserveRatio(false);
         background.setSmooth(true);
         background.fitWidthProperty().bind(primaryStage.widthProperty());
         background.fitHeightProperty().bind(primaryStage.heightProperty());
 
-        // Overlay sombre
-     // Dark overlay that covers the entire screen
+        // Dark overlay that covers the entire screen
         Pane darkOverlay = new Pane();
         darkOverlay.setStyle("-fx-background-color: rgba(0, 0, 0, 0.5);");
 
@@ -42,47 +41,45 @@ public class Board extends Pane {
         darkOverlay.prefWidthProperty().bind(primaryStage.widthProperty());
         darkOverlay.prefHeightProperty().bind(primaryStage.heightProperty());
 
-
-        // Conteneur principal
+        // Main container for the background and overlay
         StackPane backgroundStack = new StackPane();
         backgroundStack.getChildren().addAll(background, darkOverlay);
 
-        // Menu
+        // Initialize the menu
         menu = new Menu(primaryStage);
 
-        // Ajouter les éléments au panneau principal
+        // Add elements to the main pane
         getChildren().add(backgroundStack);
 
-        // Charger le plateau de jeu
+        // Load the game board
         createSnakeBoard();
-
-      
     }
     
-   
-
+    // Method to start the game scene
     public void start(Stage primaryStage) {
-        // Création de la scène
+        // Create the scene
         Scene scene = new Scene(this, 1100, 800);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        // Gestion des interactions clavier
+        // Handle keyboard interactions
         scene.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.M) {
-                menu.showMenu();
+                menu.showMenu(); // Show the menu when 'M' is pressed
             }
         });
 
-        scene.getRoot().requestFocus();
+        scene.getRoot().requestFocus(); // Request focus for keyboard input
     }
 
+    // Method to create the snake board
     private void createSnakeBoard() {
-        loadRectanglesFromFXML();
+        loadRectanglesFromFXML(); // Load rectangles from FXML file for the board layout
     }
 
+    // Load rectangles from FXML
     private void loadRectanglesFromFXML() {
         try {
             // Load the FXML file
@@ -91,7 +88,7 @@ public class Board extends Pane {
 
             // Check if the file was loaded correctly
             if (root == null) {
-                throw new FXMLLoadingException(); // Throw custom exception if the file is not found
+                throw new FXMLLoadingException(); // Throw a custom exception if the file is not found
             }
 
             // Access the controller of the FXML file
@@ -99,7 +96,7 @@ public class Board extends Pane {
 
             // Initialize players
             boardController.setPlayers(playerConfigs);
-            boardController.initializePion();
+            boardController.initializePion(); // Initialize the game pieces
 
             // Add the root node to the scene
             getChildren().add(root);
@@ -111,8 +108,4 @@ public class Board extends Pane {
             e.printStackTrace();
         }
     }
-
-
-
-    
 }

@@ -1,27 +1,15 @@
 .root {
     -fx-background-image: url("/images/menuTTMC.png");
-    -fx-background-size: cover; /* Couvre tout le fond */
+    -fx-background-size: cover;
     -fx-background-position: center center;
-    -fx-background-repeat: no-repeat; /* Ne pas répéter l'image */
+    -fx-background-repeat: no-repeat;
     -fx-border-color: yellow;
     -fx-border-width: 5px;
     -fx-border-radius: 10px;
     -fx-padding: 40 30 40 30;
     -fx-alignment: center;
+    -fx-background-color: rgba(0, 0, 0, 0.7); 
 }
-
-.root::before {
-    content: "";
-    -fx-background-color: rgba(0, 0, 0, 0.7); /* Overlay noir semi-transparent */
-    -fx-fill: rgba(0, 0, 0, 0.7); /* Couvre l'image avec une teinte sombre */
-    -fx-translate-x: 0;
-    -fx-translate-y: 0;
-    -fx-width: 100%;
-    -fx-height: 100%;
-    -fx-position: absolute;
-    -fx-alignment: center;
-}
-
 
 .title-label {
     -fx-fill: yellow;
@@ -36,34 +24,29 @@
 
 .arcade-button {
     -fx-background-color: transparent;
-    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+    -fx-text-fill: yellow;
+    -fx-font-family: 'Press Start 2P', sans-serif;
     -fx-font-size: 16px;
-    -fx-padding: 14px 26px;
-    -fx-border-color: yellow;
-    -fx-border-width: 2px;
-    -fx-border-radius: 10px;
-    -fx-background-radius: 10px;
+    -fx-padding: 12px 24px;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, yellow, 5, 0.3, 0, 0);
-    -fx-translate-x: 0;
-    -fx-alignment: center;
-    -fx-max-width: 300px;
-    -fx-min-width: 250px;
-    -fx-margin-top: 15px;
+    -fx-effect: dropshadow(gaussian, red, 3, 0.7, 0, 0);
+    -fx-transition: all 0.3s ease;
+    -fx-border-color: transparent; 
 }
 
 .arcade-button:hover {
     -fx-text-fill: red;
-    -fx-border-color: red;
-    -fx-effect: dropshadow(gaussian, red, 10, 0.6, 0, 0);
-    -fx-translate-y: -2px;
+    -fx-effect: dropshadow(gaussian, red, 5, 0.9, 0, 0);
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
 }
 
 .arcade-button:pressed {
-    -fx-translate-y: 1px;
-    -fx-scale-x: 0.98;
-    -fx-scale-y: 0.98;
-    -fx-effect: dropshadow(gaussian, orange, 5, 0.8, 0, 0);
+    -fx-text-fill: darkred;
+    -fx-effect: dropshadow(gaussian, darkred, 4, 0.5, 0, 0);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
 }
+
+

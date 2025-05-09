@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.effect.Glow;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -28,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import Views.GameMenu;
+
 import Views.RankingMenu;
 
 public class BoardController {
@@ -48,7 +47,7 @@ public class BoardController {
     @FXML private Text progressionPion1, progressionPion2, progressionPion3, progressionPion4;
 
     private Map<Integer, Node> tileMap = new HashMap<>();
-    private Glow glowEffect = new Glow(0.8);
+  
 
     public void setPlayers(List<PlayerConfig> players) {
         this.players = players;
@@ -57,7 +56,7 @@ public class BoardController {
         moveButton.setText("Play : " + players.get(0).getPlayerName());
     }
     
-    // Vecteurs des positions pour chaque pion
+    
     private List<List<Double>> path1 = new ArrayList<>();
     private List<List<Double>> path2 = new ArrayList<>();
     private List<List<Double>> path3 = new ArrayList<>();
@@ -65,7 +64,7 @@ public class BoardController {
 
     @FXML
     public void initialize() {
-        // Initialisation des chemins de chaque pion
+        // Init tile path
         path1 = createPath1();
         path2 = createPath2();
         path3 = createPath3();
@@ -76,28 +75,20 @@ public class BoardController {
     }
     
     
-    private void highlightPion(Pane pion) {
-        pion.setEffect(glowEffect);  
-    }
-
-    
-    private void removeGlowEffect(Pane pion) {
-        pion.setEffect(null);  
-    }
     
     private String getThemeForPosition(int position) {
-        // Les cases start (position 0 et dernière position) donnent un thème aléatoire
+        // The start tiles (position 0 and last position) provide a random theme
         if (position == 0 || position == path1.size() - 1) {
             String[] randomThemes = {"Education", "Entertainment", "Improbable", "Informatics"};
             return randomThemes[new Random().nextInt(randomThemes.length)];
         }
         
-        // Pour les autres positions, on récupère la tile correspondante
-        Node tile = tileMap.get(position + 1); // +1 car les tiles commencent à 1
+        // For other positions, get the corresponding tile
+        Node tile = tileMap.get(position + 1); // +1 because tiles start at index 1
         if (tile != null) {
-            // Parcourir toutes les classes CSS de la tile
+            // Iterate through all CSS classes of the tile
             for (String styleClass : tile.getStyleClass()) {
-                // Vérifier si la classe correspond à un thème connu
+                // Check if the class matches a known theme
                 if (styleClass.equals("Education") || 
                     styleClass.equals("Entertainment") ||
                     styleClass.equals("Improbable") || 
@@ -106,8 +97,9 @@ public class BoardController {
                 }
             }
         }
-        return "Education"; // Thème par défaut
+        return "Education"; // Default theme
     }
+
     
     private void initializeTileMap() {
         tileMap.put(1, tile1);
@@ -152,32 +144,32 @@ public class BoardController {
 
         switch (player.getShapeIndex()) {
             case 0:
-                // Cercle : rayon de 15, diamètre 30
+              
                 Circle circle = new Circle(14);
                 circle.setStroke(Color.WHITE);
                 circle.setStrokeWidth(2);
-                circle.setCenterX(30);  // Centré dans le conteneur 60x60
-                circle.setCenterY(30);  // Centré dans le conteneur 60x60
+                circle.setCenterX(30);  
+                circle.setCenterY(30);  
                 shape = circle;
                 break;
 
             case 1:
-                // Carré : côté de 30 (rayon de 15)
+               
                 Rectangle rectangle = new Rectangle(25, 25);
                 rectangle.setStroke(Color.WHITE);
                 rectangle.setStrokeWidth(2);
-                rectangle.setX(17.5);  // Centré dans le conteneur 60x60
-                rectangle.setY(17.5);  // Centré dans le conteneur 60x60
+                rectangle.setX(17.5);  
+                rectangle.setY(17.5);  
                 shape = rectangle;
                 break;
 
             case 2:
-                // Triangle : ajusté pour avoir une base de 30 (rayon de 15)
+                
                 Polygon triangle = new Polygon();
                 triangle.getPoints().addAll(
-                    30.0, 10.0,   // Point supérieur (sommet) : centré horizontalement, à 10px du haut
-                    45.0, 40.0,   // Point bas droit
-                    15.0, 40.0    // Point bas gauche
+                    30.0, 10.0,   
+                    45.0, 40.0,   
+                    15.0, 40.0    
                 );
                 triangle.setStroke(Color.WHITE);
                 triangle.setStrokeWidth(2);
@@ -185,7 +177,7 @@ public class BoardController {
                 break;
         }
 
-        // Changer la couleur selon l'index
+      
         switch(player.getColorIndex()) {
             case 0: shape.setFill(Color.RED); break;
             case 1: shape.setFill(Color.GREEN); break;
@@ -193,9 +185,9 @@ public class BoardController {
             default: shape.setFill(Color.YELLOW); break;
         }
 
-        // Ajouter la forme au pane
+       
         if (shape != null) {
-            pane.getChildren().clear(); // En cas de changement
+            pane.getChildren().clear();
             pane.getChildren().add(shape);
         }
     }
@@ -241,7 +233,7 @@ public class BoardController {
     	}
     }
 
-    // Créer les chemins pour chaque pion (chemin 1 à 4)
+   
     private List<List<Double>> createPath1() {
         List<List<Double>> path = new ArrayList<>();
         path.add(List.of(-14.0, 160.0));
@@ -405,19 +397,19 @@ public class BoardController {
         return path;
     }
 
-    // Positionner les pions
+    // Pos tile
     private void positionPion(Pane pion, List<Double> position) {
         pion.setLayoutX(position.get(0));
         pion.setLayoutY(position.get(1));
     }
 
 
-    // Méthode pour déplacer un pion d'une case à la suivante
+    // Method to deplace tile
     public void movePions(int pionIndex, int steps) {
-        // Enlève l'effet lumineux sur tous les pions
+      
 
         PlayerConfig player = players.get(pionIndex);
-        // Avance d'une case
+       
         int pos = player.getPosition() + steps;
         Pane pion = getPionCircle(pionIndex);
         
@@ -433,13 +425,13 @@ public class BoardController {
         	positionPion(pion, path.get(player.getPosition()));
         }
         
-        // Remet l'effet lumineux sur le bon bouton
+        
 
-        // Met à jour le texte de progression
+        // update progression text
         updateProgressionText(pionIndex, pos);
     }
 
-    // Petite méthode utilitaire pour récupérer le bon chemin
+ 
     private List<List<Double>> getPathForPion(int pionIndex) {
         switch (pionIndex) {
             case 0: return path1;
@@ -450,7 +442,7 @@ public class BoardController {
         }
     }
 
-    // Petite méthode utilitaire pour récupérer l'ImageView du pion
+   
     private Pane getPionCircle(int pionIndex) {
         switch (pionIndex) {
             case 0: return pionContainer1;
@@ -461,18 +453,8 @@ public class BoardController {
         }
     }
 
-    // Petite méthode utilitaire pour récupérer le bouton du pion
-    private Pane getPionHighlight(int pionIndex) {
-        switch (pionIndex) {
-            case 0: return pion1b;
-            case 1: return pion2b;
-            case 2: return pion3b;
-            case 3: return pion4b;
-            default: throw new IllegalArgumentException("Invalid pion index");
-        }
-    }
+ 
 
-    // Petite méthode utilitaire pour mettre à jour le texte de progression
     private void updateProgressionText(int pionIndex, int pos) {
         switch (pionIndex) {
             case 0: progressionPion1.setText(String.valueOf(pos)); break;
@@ -496,7 +478,7 @@ public class BoardController {
                 TirageCarte.setUsed(true);
 
                 try {
-                    // Chargement du FXML et récupération du vrai contrôleur
+                   
                     FXMLLoader loader = new FXMLLoader(TirageCarte.class.getResource("/views/card.fxml"));
                     Parent root = loader.load();
                     TirageCarte controller = loader.getController();
@@ -506,19 +488,19 @@ public class BoardController {
                     
                     Stage mainStage = (Stage) pionContainer1.getScene().getWindow();
                     stage.initOwner(mainStage);
-                    stage.setAlwaysOnTop(true); // (facultatif) pour rester devant
+                    stage.setAlwaysOnTop(true); 
                     
                     stage.setTitle("Carte - Thème : " + theme);
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
 
-                    controller.setStage(stage); // Important pour que getStage() fonctionne
+                    controller.setStage(stage); 
                     controller.applyTheme(theme);
                     stage.setResizable(false);
                     stage.show();
                     stage.toFront();
 
-                    // Quand la fenêtre se ferme, on agit
+                   
                     stage.setOnHidden(e -> {
                         Platform.runLater(() -> {
                             Question q = controller.getCurrentQuestion();

@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RankingMenuController">
+<BorderPane fx:id="borderPane" stylesheets="@Ranking.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RankingMenuController" >
+
    <bottom>
       <Button fx:id="gameMenuButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Back Menu" BorderPane.alignment="CENTER">
          <font>
@@ -15,7 +16,7 @@
          </font></Button>
    </bottom>
    <center>
-      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="500.0" style="-fx-border-style: solid; -fx-border-radius: 10px;" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" style="-fx-border-style: solid; -fx-border-radius: 10px;" BorderPane.alignment="CENTER">
          <children>
             <HBox fx:id="playerOneHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -77,7 +78,7 @@
       </VBox>
    </center>
    <top>
-      <Label alignment="CENTER" contentDisplay="CENTER" text="Ranking" BorderPane.alignment="CENTER">
+      <Label fx:id="rankingTitle" alignment="CENTER" contentDisplay="CENTER" text="Ranking" BorderPane.alignment="CENTER">
          <font>
             <Font size="72.0" />
          </font>

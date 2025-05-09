@@ -76,10 +76,10 @@ public class RankingMenuController {
 
     
     private void goBackToMenu() {
-        // Ferme la fenêtre actuelle
+        // close current window
     	((Stage) gameMenuButton.getScene().getWindow()).close();
 
-        // Lance le menu principal
+        // launch main menu
         Play gameMenu = new Play();
         gameMenu.start(new Stage());
     }

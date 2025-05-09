@@ -535,7 +535,7 @@
       {
         "theme_name": "Education",
         "priority": 4,
-        "question": "In game development, what does the term ""delta time"" typically refer to?",
+        "question": "In game development, what does the term delta time typically refer to?",
         "answer": "",
         "multiple_choice": [
           "The time it takes to compile the game",
@@ -561,7 +561,7 @@
       {
         "theme_name": "Education",
         "priority": 4,
-        "question": "In educational games, what is “intrinsic integration” of learning content?",
+        "question": "In educational games, what is intrinsic integration of learning content?",
         "answer": "When educational content is seamlessly embedded in core gameplay mechanics",
         "multiple_choice": [
           "When the educational content is optional and separate from gameplay",
@@ -600,7 +600,7 @@
       {
         "theme_name": "Informatics",
         "priority": 4,
-        "question": "What is a ""shader"" in the context of modern video games?",
+        "question": "What is a shader in the context of modern video games?",
         "answer": "A program that calculates the effects of lighting and shadows in a game",
         "multiple_choice": [
           "A tool used to edit game textures",
@@ -626,7 +626,7 @@
       {
         "theme_name": "Informatics",
         "priority": 4,
-        "question": "What is the primary function of the game engine ""Unity"" in the development of video games?",
+        "question": "What is the primary function of the game engine Unity in the development of video games?",
         "answer": "It handles the game's visual effects, lighting, and rendering",
         "multiple_choice": [
           "It provides a platform for social media integration in games",
